@@ -8,9 +8,10 @@ use Yii;
  * This is the model class for table "tutor_info".
  *
  * @property int $tId
- * @property string $tName
+ * @property string|null $username
+ * @property string|null $tName
  * @property string|null $school_name 该见习或实习老师所在学校名称
- * @property string $job_num
+ * @property string|null $job_num
  * @property string|null $contactPhone
  * @property string|null $email
  * @property string|null $rank
@@ -33,10 +34,10 @@ class TutorInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tId', 'tName', 'job_num'], 'required'],
+            [['tId'], 'required'],
             [['tId', 'status', 'ischoosen'], 'integer'],
+            [['username', 'school_name', 'job_num'], 'string', 'max' => 255],
             [['tName', 'contactPhone', 'email'], 'string', 'max' => 50],
-            [['school_name', 'job_num'], 'string', 'max' => 255],
             [['rank'], 'string', 'max' => 20],
         ];
     }
@@ -48,6 +49,7 @@ class TutorInfo extends \yii\db\ActiveRecord
     {
         return [
             'tId' => 'T ID',
+            'username' => 'Username',
             'tName' => 'T Name',
             'school_name' => 'School Name',
             'job_num' => 'Job Num',

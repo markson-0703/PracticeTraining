@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "teacher_info".
  *
  * @property int $tId
+ * @property string|null $username
  * @property string|null $tName
  * @property string|null $job_num
  * @property string|null $contactPhone
@@ -34,8 +35,8 @@ class TeacherInfo extends \yii\db\ActiveRecord
         return [
             [['tId'], 'required'],
             [['tId', 'status', 'ischoosen'], 'integer'],
+            [['username', 'job_num'], 'string', 'max' => 255],
             [['tName', 'contactPhone', 'email'], 'string', 'max' => 50],
-            [['job_num'], 'string', 'max' => 255],
             [['rank'], 'string', 'max' => 20],
         ];
     }
@@ -47,6 +48,7 @@ class TeacherInfo extends \yii\db\ActiveRecord
     {
         return [
             'tId' => 'T ID',
+            'username' => 'Username',
             'tName' => 'T Name',
             'job_num' => 'Job Num',
             'contactPhone' => 'Contact Phone',

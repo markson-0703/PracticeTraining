@@ -23,6 +23,9 @@ return [
         ],
         'refine'=> [
             'class' => 'backend\module\refine\Module',
+        ],
+        'probation'=> [
+            'class' => 'backend\module\probation\Module',
         ]
     ],
     'components' => [

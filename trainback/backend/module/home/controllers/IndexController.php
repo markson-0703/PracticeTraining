@@ -247,4 +247,53 @@ class IndexController extends Controller
         return $s;
     }
 
+    public function actionAlteraccount()
+    {
+        //用户更换密码
+        $request = \Yii::$app->request;
+        $username = $request->post('username');
+        $oldPassword = $request->post('oldPassword');
+        $newPassword = $request->post('newPassword');
+
+        $query1=(new Query())
+            ->select('*')
+            ->from('users')
+            ->Where(['username'=> $username])
+            ->andWhere(['status'=> 1])
+            ->one();
+        if($query1){
+            $password=$this->PasswordDecry($query1['password']);//解密
+             if($password==$oldPassword){
+            $id=$query1['id'];
+            $role=$query1['role'];
+            $token = $this->generateAccessToken();
+            $insertPwd=$this->PasswordEncry($newPassword);//给新密码加密
+            $insert=\Yii::$app->db->createCommand()->update('users',
+            [
+            'id'=>$id,
+            'username'=>$username,
+            'token'=>$token,
+            'password'=>$insertPwd,
+            'role'=>$role,
+            'status'=>1
+            ],
+            'username=:username',[':username'=>$username])
+            ->execute();
+            if($insert){
+                return array("data"=>"修改成功，请重新登入","msg"=>"密码修改成功");
+            }
+            else{
+                return array("data"=>"修改失败","msg"=>"密码修改失败");
+            }
+
+             }
+             else{
+                return array("data"=>[],"msg"=>"旧密码错误");
+             }
+        }
+        else{
+            return array("data"=>[],"msg"=>"用户不存在");
+        }
+    }
+
 }

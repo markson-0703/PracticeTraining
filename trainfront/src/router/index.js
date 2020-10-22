@@ -10,6 +10,15 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Main from "../pages/home/main.vue";
 import ProbationIndex from "../pages/administrator/probation/index.vue";
+import PracticeIndex from "../pages/administrator/practice/index";
+import ProbationIndex1 from "../pages/student/probation/index";
+import HomePage from "../pages/administrator/probation/homepage";
+import My from "../pages/administrator/probation/my";
+import My1 from "../pages/student/probation/my";
+import User from "../pages/administrator/probation/user"
+import Member from "../pages/administrator/probation/member";
+import SiteArrange from "../pages/administrator/probation/siteArrange";
+import TutorSelect from "../pages/student/probation/tutorSelect"
 Vue.use(Router)
 const  router = new Router({
   mode:'history',
@@ -95,37 +104,75 @@ const  router = new Router({
       },
       component:ProbationIndex,
       children:[
-
+        {
+          path: '/administrator/probation/homepage',
+          name: 'HomePage',
+          component: HomePage
+        },
+        {
+          path: '/administrator/probation/my',
+          name: 'My',
+          component: My
+        },
+        {
+          path: '/administrator/probation/user',
+          name: 'User',
+          component: User
+        },
+        {
+          path: '/administrator/probation/member',
+          name: 'Member',
+          component: Member
+        },
+        {
+          path: '/administrator/probation/siteArrange',
+          name: 'SiteArrange',
+          component: SiteArrange
+        }
+      ]
+    },
+    {
+      //管理员实习首页
+      path:'/administrator/practice/index',
+      name:'PracticeIndex',
+      meta:{
+        isLogin:true,
+      },
+      component:PracticeIndex,
+      children:[
+        {
+          path: '/administrator/probation/my',
+          name: 'My',
+          component: My
+        }
+      ]
+    },
+    {
+      //学生见习首页
+      path:'/student/probation/index',
+      name:'ProbationIndex1',
+      meta:{
+        isLogin:true,
+      },
+      component:ProbationIndex1,
+      children:[
+        {
+          path: '/student/probation/my',
+          name: 'My1',
+          component: My1
+        },
+        {
+          path: '/student/probation/tutorSelect',
+          name: 'TutorSelect',
+          component: TutorSelect
+        }
       ]
     }
   ]
 })
-// export default new Router({
-//   mode:'history',
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Index',
-//       meta:{
-//         requireAuth:true,//需要登录
-//       },
-//       component: Index
-//     },
-//     {
-//       path: '/register',
-//       name: 'Register',
-//       component: Register
-//     },
-//     {
-//       path:'/forget',
-//       name:'Forget',
-//       component:Forget
-//     },
-//     {
-//       path:'/login',
-//       name:'Login',
-//       component:Login
-//     }
-//   ]
-// });
+
 export default router;
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}

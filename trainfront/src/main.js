@@ -41,25 +41,18 @@ Vue.prototype.$http = axios
 //
 router.beforeEach((to,from,next)=>{
   let stoken = store.getters.getsToken
+  let user=store.getters.getsName
   console.log(stoken)
-  if (stoken) {
-    next()
-    //已经登录的
-    // if(!to.meta.isLogin)
-    // {
-    //   console.log("已经登录过了，先退出登录")
-    // }
-    // next('/home/main')
-  }
-  else {
-    if(to.meta.isLogin){
-      next('/login')
-      console.log("需要登录")
+  if (to.meta.isLogin==true) {
+    if (!user) {
+      next({path: '/login'})
+    } else {
+      return next()
     }
+  }
     else{
-      next()
+     return next()
     }
-  }
 })
 Vue.use(VueResource)
 Vue.use(Vuerouter)

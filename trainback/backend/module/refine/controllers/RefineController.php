@@ -15,9 +15,12 @@ class RefineController extends Controller{
 	{
 		return "完善个人注册信息";
 	}
-	public function actionSubtea(){
+
+	public function actionSubtea()
+	{
 		//提交本校教师信息
 		$request = \Yii::$app->request;
+		$username=$request->post('username');
 		$name=$request->post('name');
 		$jno=$request->post('jno');
 		$phone=$request->post('phone');
@@ -45,6 +48,7 @@ class RefineController extends Controller{
 			          	array(
 			          		'tId'=>$id,
 			          		'tName'=>$name,
+			          		'username'=>$username,
 			          		'job_num'=>$jno,
 			          		'contactPhone'=>$phone,
 			          		'email'=>$email,
@@ -141,6 +145,7 @@ class RefineController extends Controller{
 	public function actionSubstu(){
 		//提交学生信息
 		$request = \Yii::$app->request;
+		$username=$request->post('username');
 		$name=$request->post('name');
 		$sno=$request->post('sno');
 		$sex=$request->post('sex');
@@ -171,6 +176,7 @@ class RefineController extends Controller{
 			          	array(
 			          		'sId'=>$id,
 			          		'sName'=>$name,
+			          		'username'=>$username,
 			          		'sno'=>$sno,
 			          		'sex'=>$sex,
 			          		'cId'=>$classId,
@@ -265,6 +271,7 @@ class RefineController extends Controller{
 	public function actionSubtut(){
 		//提交校外教师信息
 		$request = \Yii::$app->request;
+		$username=$request->post('username');
 		$name=$request->post('name');
 		$sName=$request->post('sName');
 		$jno=$request->post('jno');
@@ -291,6 +298,7 @@ class RefineController extends Controller{
 			          	array(
 			          		'tId'=>$id,
 			          		'tName'=>$name,
+			          		'username'=>$username,
 			          		'school_name'=>$sName,
 			          		'job_num'=>$jno,
 			          		'contactPhone'=>$phone,

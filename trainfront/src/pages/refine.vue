@@ -144,7 +144,7 @@
       </div>
     </el-dialog>
 <!--          校外教师-->
-    <el-form :model="tutorDetails" :rules="rules" ref="tutorDetails" label-width="150px" style="margin: 50px auto;display: inline-block">
+    <el-form :model="tutorDetails" :rules="rules" ref="tutorDetails" label-width="150px" style="margin: 50px auto;display: inline-block" v-show="s3">
       <el-form-item label="姓名" style="width:400px" prop="name">
         <el-input v-model="tutorDetails.name" autocomplete="off"></el-input>
       </el-form-item>
@@ -212,6 +212,7 @@
                 s2:false,//判断学生界面是否显示
                 s3:false,//判断校外教师界面是否显示
                 role:'',//用户注册的身份
+                uName:'',//用户名
                 dialogFormVisible1:false,
                 dialogFormVisible2:false,
                 dialogFormVisible3:false,
@@ -383,6 +384,7 @@
                 //提交本校教师的信息
                 let that=this
                 that.$http.post('/yii/refine/refine/subtea',{
+                    username:that.uName,
                     name:that.teacherDetails.name,
                     jno:that.teacherDetails.jno,
                     phone:that.teacherDetails.phone,
@@ -409,6 +411,7 @@
                 //提交学生的信息
                 let that = this
                 that.$http.post('/yii/refine/refine/substu',{
+                    username:that.uName,
                     name:that.studentDetails.name,
                     sno:that.studentDetails.sno,
                     sex:that.studentDetails.sex,
@@ -438,6 +441,7 @@
                 //提交校外教师的信息
                 let that=this
                 that.$http.post('/yii/refine/refine/subtut',{
+                    username:that.uName,
                     name:that.tutorDetails.name,
                     sName:that.tutorDetails.schName,
                     jno:that.tutorDetails.jno,
@@ -598,9 +602,8 @@
         },
         created(){
         this.role=(this.$route.params.role).toString()
+        this.uName=this.$route.params.username//获取用户名
         this.isShow()
-        console.log(this.$route.params.username)
-        console.log(this.$route.params.role)
         console.log(typeof(this.$route.params.role))//注意role的类型
        }
     }
