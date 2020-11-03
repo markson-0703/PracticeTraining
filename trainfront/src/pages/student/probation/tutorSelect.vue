@@ -84,7 +84,13 @@
         <el-divider></el-divider>
         <div class="show-result" v-show="showResult">
         <p v-if="this.ischoosen==0">提交成功，请等待老师审核</p>
-        <p v-if="this.ischoosen==1">老师审核成功，成功分配见习地点</p>
+        <p v-if="this.ischoosen==1">{{this.finaltutor}}老师审核成功,你的见习地点为{{this.finalsite}}</p>
+          <div v-if="this.leader==1">
+            <p>你是该见习点的小组长,组员包括:</p>
+            <ul v-for="item in memberList">
+              <li>{{item.sName}}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </el-tab-pane>
@@ -158,7 +164,13 @@
         <el-divider></el-divider>
         <div class="show-result" v-show="showResult1">
           <p v-if="this.ischoosen==0">提交成功，请等待老师审核</p>
-          <p v-if="this.ischoosen==1">老师审核成功，成功分配见习地点</p>
+          <p v-if="this.ischoosen==1">{{this.finaltutor}}老师审核成功,你的见习地点为{{this.finalsite}}</p>
+          <div v-if="this.leader==1">
+            <p>你是该见习点的小组长,组员包括:</p>
+             <ul v-for="item in memberList">
+               <li>{{item.sName}}</li>
+             </ul>
+          </div>
         </div>
       </div>
     </el-tab-pane>
@@ -179,6 +191,7 @@
                 inputsite:'',
                 teacherList:[],
                 schoolList:[],
+                memberList:[],
                 teaForm:{
                     tName:'',//校内导师的姓名
                     job_num:''//校内导师的工号
@@ -197,6 +210,9 @@
                 sno:'',//学生学号
                 sName:'',//学生姓名
                 ischoosen:0,//鉴定导师是否同意
+                finaltutor:'',//最终的导师
+                finalsite:'',//最终的见习点
+                leader:0,//是否被选为了组长
                 siteList:[],//每个老师对应的见习点列表
                 tutorList:[],//见习点导师列表
                 tutorList1:[],
@@ -206,6 +222,37 @@
             }
         },
         methods: {
+            checkShow(){
+                //如果学生用户已经申请了导师，则相应界面显示
+                let that = this
+                that.$http.post('/yii/probation/select/ischoose',{
+                    username:that.username
+                }).then((res)=>{
+                    console.log(res.data)
+                    if(res.data.message=="success"){
+                        that.ischoosen=res.data.data.ischecked
+                        that.finaltutor=res.data.data.tName
+                        that.finalsite=res.data.data.school_name
+                        that.leader=res.data.data.leader
+                        alert("你已申请过见习导师，请勿重复选择！")
+                        this.showResult=true
+                        this.showResult1=true
+                    }else if(res.data.message=="学生还未申请导师"){
+                        alert("你还未申请过导师，请任选一种方式进行导师选择！")
+                    }
+                })
+            },
+            getMember(){
+                //获取小组成员
+                let that = this
+                that.$http.post('/yii/probation/select/getmember',{
+                    username:this.username
+                }).then((res)=>{
+                    console.log(res.data)
+                    that.memberList=res.data.data
+                })
+
+            },
             handleClick(tab, event) {
                 console.log(tab, event);
             },
@@ -277,6 +324,7 @@
                 }).then((res)=>{
                     console.log(res.data)
                     that.showResult=true
+                    that.showResult1=true
                     that.ischoosen=res.data.data.ischecked
                     console.log(that.ischoosen)
                     console.log(res.data.data.ischecked)
@@ -302,6 +350,7 @@
                     site:that.teaForm1.school
                 }).then((res)=>{
                     console.log(res.data)
+                    that.showResult=true
                     that.showResult1=true
                     that.ischoosen=res.data.data.ischecked
                     if(res.data.message=="success"){
@@ -475,6 +524,8 @@
             this.getSchoolData()
             this.username=this.$store.getters.getsName
             this.getStuInfo()
+            this.checkShow()
+            this.getMember()
             console.log(this.$store.getters.getsName)//获取当前学生用户的用户名
         }
     }
@@ -549,5 +600,12 @@
   }
   .show-result p{
     font-weight: bolder;
+  }
+  .show-result ul{
+    list-style: none;
+  }
+  .show-result li{
+    display: inline;
+    /*float:left;*/
   }
 </style>

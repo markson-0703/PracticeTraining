@@ -12,9 +12,8 @@
 <!--        </el-submenu>-->
         <el-submenu index="4">
           <template slot="title">见习信息管理</template>
-
           <el-menu-item index="siteArrange">见习点分配</el-menu-item>
-          <el-menu-item index="4-2">导师安排</el-menu-item>
+          <el-menu-item index="activityArrange">见习安排</el-menu-item>
         </el-submenu>
         <el-submenu index="5">
           <template slot="title">见习资源管理</template>

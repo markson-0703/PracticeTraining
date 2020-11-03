@@ -9,16 +9,23 @@ import Index from '../pages/index.vue'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Main from "../pages/home/main.vue";
-import ProbationIndex from "../pages/administrator/probation/index.vue";
+import ProbationIndex from "../pages/administrator/probation/index.vue";//管理员见习首页
 import PracticeIndex from "../pages/administrator/practice/index";
-import ProbationIndex1 from "../pages/student/probation/index";
+import ProbationIndex1 from "../pages/student/probation/index";//学生见习首页
 import HomePage from "../pages/administrator/probation/homepage";
 import My from "../pages/administrator/probation/my";
 import My1 from "../pages/student/probation/my";
+import My2 from "../pages/teacher/probation/my";
 import User from "../pages/administrator/probation/user"
 import Member from "../pages/administrator/probation/member";
 import SiteArrange from "../pages/administrator/probation/siteArrange";
-import TutorSelect from "../pages/student/probation/tutorSelect"
+import TutorSelect from "../pages/student/probation/tutorSelect";
+import ProbationIndex2 from "../pages/teacher/probation/index";//校内教师见习首页
+import StudentManage from "../pages/teacher/probation/studentManage";
+import Process from "../pages/student/probation/process";
+import ActivityArrange from"../pages/administrator/probation/activityArrange";
+import ProbationRecord from"../pages/student/probation/probationRecord";
+import ProbationRecord1 from"../pages/student/probation/probationRecord1"
 Vue.use(Router)
 const  router = new Router({
   mode:'history',
@@ -128,6 +135,11 @@ const  router = new Router({
           path: '/administrator/probation/siteArrange',
           name: 'SiteArrange',
           component: SiteArrange
+        },
+        {
+          path: '/administrator/probation/activityArrange',
+          name: 'ActivityArrange',
+          component: ActivityArrange
         }
       ]
     },
@@ -165,6 +177,42 @@ const  router = new Router({
           path: '/student/probation/tutorSelect',
           name: 'TutorSelect',
           component: TutorSelect
+        },
+        {
+          path:'/student/probation/process',
+          name:'Process',
+          component: Process
+        },
+        {
+          path:'/student/probation/probationRecord',
+          name:'ProbationRecord',
+          component: ProbationRecord
+        },
+        {
+          path:'/student/probation/probationRecord1',
+          name:'ProbationRecord1',
+          component: ProbationRecord1
+        }
+      ]
+    },
+    {
+      //校内教师见习首页
+      path:'/teacher/probation/index',
+      name:'ProbationIndex2',
+      meta:{
+        isLogin:true,
+      },
+      component:ProbationIndex2,
+      children:[
+        {
+          path: '/teacher/probation/my',
+          name: 'My2',
+          component: My2
+        },
+        {
+          path: '/teacher/probation/studentManage',
+          name: 'StudentManage',
+          component: StudentManage
         }
       ]
     }

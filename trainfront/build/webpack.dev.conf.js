@@ -45,6 +45,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new webpack.ProvidePlugin({
+//添加这两个
+      'window.Quill': 'quill/dist/quill.js',
+      'Quill': 'quill/dist/quill.js'
+    }),
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),

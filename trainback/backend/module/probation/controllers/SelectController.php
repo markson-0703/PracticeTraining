@@ -142,4 +142,51 @@ class SelectController extends Controller{
 	  	return array("data"=>$query,"msg"=>"信息已存在");
 	  }
 	}
+
+	public function actionIschoose(){
+		//判定学生用户是否已经选择导师
+		$request = \Yii::$app->request;
+		$username=$request ->post('username');
+		$query=(new Query())
+		      ->select('*')
+		      ->from('arrange_info')
+		      ->andWhere(['username'=>$username])
+		      ->andWhere(['type'=>1])
+		      ->one();
+		if($query){
+			return array("data"=>$query,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"学生还未申请导师");
+		}
+	}
+
+	public function actionGetmember(){
+		//获取小组成员信息
+		$request = \Yii::$app->request;
+		$username=$request ->post('username');
+		$query=(new Query())
+		      ->select('*')
+		      ->from('arrange_info')
+		      ->andWhere(['username'=>$username])
+		      ->one();
+		if($query)
+		{
+			$site=$query['school_name'];
+			$query1=(new Query())
+			       ->select('*')
+			       ->from('arrange_info')
+			       ->andWhere(['school_name'=>$site])
+			       ->andWhere(['ischecked'=>1])
+			       ->andWhere(['status'=>1])
+			       ->all();
+			if($query1){
+			return array("data"=>$query1,"msg"=>"success");
+		  }else{
+			return array("data"=>[],"msg"=>"failure");
+		  }
+		}
+		else{
+			return false;
+		}
+	}
 }

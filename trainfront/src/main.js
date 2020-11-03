@@ -9,7 +9,15 @@ import router from './router'
 import store from './store/index'
 import Vuerouter from 'vue-router'
 import VueResource from 'vue-resource'
+import htmlToPdf from '../src/utils/htmlToPdf'
+Vue.use(htmlToPdf)
 import axios from 'axios'
+//为防止富文本编辑器出现不规则图形
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+import quillEditor from 'vue-quill-editor'//引入富文本编辑器
+Vue.use(quillEditor)
 // axios.defaults.baseURL ='/yii'
 import baseConfig from '../config/dev.env'
 // axios.interceptors.request.use(function (config) {

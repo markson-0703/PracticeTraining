@@ -17,9 +17,12 @@ use Yii;
  * @property string|null $tutor_name 校外导师姓名
  * @property string|null $jno 校外导师工号
  * @property string|null $school_name 实践地点
+ * @property string|null $grade 学生实践的年级
+ * @property int|null $leader 判断是否为小组组长
  * @property int|null $ischecked 判定校内导师是否审核，如果审核通过置1
  * @property string|null $startTime 实践开始的时间
  * @property string|null $endTime 实践结束的时间
+ * @property int|null $status
  */
 class ArrangeInfo extends \yii\db\ActiveRecord
 {
@@ -37,8 +40,9 @@ class ArrangeInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['aId', 'type', 'ischecked'], 'integer'],
-            [['username', 'job_num', 'tName', 'tutor_name', 'jno', 'school_name', 'startTime', 'endTime'], 'string', 'max' => 255],
+            [['aId', 'type', 'leader', 'ischecked', 'status'], 'integer'],
+            [['startTime', 'endTime'], 'safe'],
+            [['username', 'job_num', 'tName', 'tutor_name', 'jno', 'school_name', 'grade'], 'string', 'max' => 255],
             [['sno', 'sName'], 'string', 'max' => 50],
         ];
     }
@@ -59,9 +63,12 @@ class ArrangeInfo extends \yii\db\ActiveRecord
             'tutor_name' => 'Tutor Name',
             'jno' => 'Jno',
             'school_name' => 'School Name',
+            'grade' => 'Grade',
+            'leader' => 'Leader',
             'ischecked' => 'Ischecked',
             'startTime' => 'Start Time',
             'endTime' => 'End Time',
+            'status' => 'Status',
         ];
     }
 }

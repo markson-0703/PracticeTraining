@@ -1,26 +1,24 @@
 <template>
-  <el-container>
-    <el-header>
-      <el-menu :unique-opened="true" :default-active="$route.path" @select="handleSelect" class="head" mode="horizontal">
-        <el-menu-item index="1" @click="backHome">首页</el-menu-item>
-        <el-menu-item index="tutorSelect">见习导师选择</el-menu-item>
-<!--        <el-menu-item index="3">教学实践记录</el-menu-item>-->
-        <el-submenu index="3">
-          <template slot="title">教学实践记录</template>
-          <el-menu-item index="process">见习历程</el-menu-item>
-          <el-menu-item index="probationRecord">见习记录</el-menu-item>
-        </el-submenu>
-        <el-menu-item index="4">见习资源管理</el-menu-item>
-        <el-menu-item index="5">见习工作的自我评价</el-menu-item>
-        <el-menu-item index="6">见习反馈</el-menu-item>
-        <el-menu-item index="my">个人中心</el-menu-item>
-        <el-menu-item index="8" @click="logout()">退出登录</el-menu-item>
-      </el-menu>
-    </el-header>
-    <el-main style="background-color: white">
-      <router-view v-if="showView"></router-view><!--这是路由出口-->
-    </el-main>
-  </el-container>
+    <el-container>
+      <el-header>
+        <el-menu :unique-opened="true" :default-active="$route.path" @select="handleSelect" class="head" mode="horizontal">
+          <el-menu-item index="1" @click="backHome">首页</el-menu-item>
+          <el-menu-item index="studentManage">学生信息管理</el-menu-item>
+          <el-menu-item index="3">见习工作指导记录</el-menu-item>
+          <el-submenu index="4">
+            <template slot="title">见习总结与反馈</template>
+            <el-menu-item index="4-1">教育见习总结</el-menu-item>
+            <el-menu-item index="4-2">教育见习反馈</el-menu-item>
+          </el-submenu>
+          <el-menu-item index="5">见习成绩鉴定</el-menu-item>
+          <el-menu-item index="my">个人中心</el-menu-item>
+          <el-menu-item  @click="logout()">退出登录</el-menu-item>
+        </el-menu>
+      </el-header>
+      <el-main style="background-color: white">
+        <router-view v-if="showView"></router-view><!--这是路由出口-->
+      </el-main>
+    </el-container>
 </template>
 
 <script>
@@ -44,7 +42,6 @@
                 })
                 this.$router.push(path)
             },
-
             logout(){
                 this.$http.post('/yii/home/index/logout',{username:this.username})
                     .then((res)=>{
@@ -83,5 +80,4 @@
     text-color:#fff;
     active-text-color:#ffd04b;
   }
-
 </style>

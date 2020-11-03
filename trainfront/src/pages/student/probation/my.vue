@@ -6,43 +6,41 @@
       <h1 style="font-weight:bold;font-color:black">{{this.content}}</h1>
       <div class="displayShow">
         <el-form :model="myDetails" label-width="150px" id="demo">
-          <el-form-item label="用户名" style="width:400px" prop="username">
+          <el-form-item label="用户名" style="width:400px;" prop="username">
             <el-input v-model="myDetails.username" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="姓名" style="width:400px" prop="sName">
+          <el-form-item label="姓名" style="width:400px;" prop="sName">
             <el-input v-model="myDetails.sName" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="学号" style="width:400px" prop="sno">
+          <el-form-item label="学号" style="width:400px;" prop="sno">
             <el-input v-model="myDetails.sno" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="性别" style="width:400px" prop="sex">
+          <el-form-item label="性别" style="width:400px;" prop="sex">
             <el-input v-model="myDetails.sex" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="班级代号" style="width:400px" prop="cId">
+          <el-form-item label="班级代号" style="width:400px;" prop="cId">
             <el-input v-model="myDetails.cId" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="班级名称" style="width:400px" prop="className">
+          <el-form-item label="班级名称" style="width:400px;" prop="className">
             <el-input v-model="myDetails.className" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="专业代号" style="width:400px" prop="majorId">
+          <el-form-item label="专业代号" style="width:400px;" prop="majorId">
           <el-input v-model="myDetails.majorId" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="专业名称" style="width:400px" prop="majorName">
+          <el-form-item label="专业名称" style="width:400px;" prop="majorName">
             <el-input v-model="myDetails.majorName" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="出生日期" style="width:400px" prop="bornDate">
+          <el-form-item label="出生日期" style="width:400px;" prop="bornDate">
             <el-input v-model="myDetails.bornDate" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="联系方式" style="width:400px" prop="phone">
+          <el-form-item label="联系方式" style="width:400px;" prop="phone">
             <el-input v-model="myDetails.phone" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="邮箱" style="width:400px" prop="email">
+          <el-form-item label="邮箱" style="width:400px;" prop="email">
             <el-input v-model="myDetails.email" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item>
-            <el-button type="info" style="width:250px" @click="downloadPdf()">导出信息</el-button>
-          </el-form-item>
         </el-form>
+        <el-button type="warning" style="width:250px;margin-top:20px;display: inline-block" @click="downloadPdf()">导出信息</el-button>
       </div>
     </el-tab-pane>
     <el-tab-pane label="修改密码" name="second">
@@ -206,28 +204,32 @@
     padding-left: 5px;
     padding-top: 10px;
     text-align: center;
+    vertical-align: center;
   }
   .ruleForm{
     display: inline-block;
   }
   .displayShow {
+    margin:0px auto;
     color:#0f0f0f;
     border: solid 1px #e0e0e0;
     height: 100%;
     text-align: center;
     width: 100%;
-    padding:5px;
-    background-color: #e2e4e4;
-    display: flex;
+    padding:30px 5px 5px 5px;
+    background-color: skyblue;
+    display: inline-block;
     justify-content: space-around;
-    align-items:flex-start;
+    align-items:center;
   }
   #demo {
     background-color: #fff;
-    width: 1000px;
+    width: 80%;
     /* height: 400px; */
-    padding: 40px;
+    padding: 60px 0px 60px 400px;
     box-sizing: border-box;
+    text-align: center;
+    align-items: center;
     display:inline-block;
   }
 
