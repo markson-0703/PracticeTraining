@@ -14,6 +14,8 @@ use common\models\ArrangeInfo;
 use common\models\SiteArrange;
 use common\models\ActivityInfo;
 use common\models\ActivityDetails;
+use common\models\ProbationFiles;
+use common\models\ProbationVideos;
 
 class InfomationController extends Controller{
 
@@ -274,6 +276,122 @@ class InfomationController extends Controller{
 			return array("data"=>[],"msg"=>"failure");
 		}
 	}
+
+	public function actionGetfile(){
+		//获取见习文件数据
+		$request = \Yii::$app->request;
+		$username=$request->post('username');
+		$type=$request->post('type');
+		$result=(new Query())
+		       ->select('*')
+		       ->from('probation_files')
+		       ->andWhere(['username'=>$username])
+		       ->andWhere(['type'=>$type])
+		       ->andWhere(['status'=>1])
+		       ->all();
+		if($result){
+			return array("data"=>$result,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"failure");
+		}
+	}
+
+	public function actionDelmyfile(){
+		//根据Id删除文件
+		$request = \Yii::$app->request;
+		$id=$request->post('id');
+		//直接删除
+		// $delete=\Yii::$app->db->createCommand()
+	 //          ->delete('probation_files','fId=:id',
+  //             [':id' => $id])->execute();
+  //    //修改状态
+        $delete=Yii::$app->db->createCommand()->update('probation_files',
+        	[
+        	'status'=>0
+        	],
+        	'fId=:id',[':id' => $id])->execute();
+         if($delete){
+         	return array("data"=>$delete,"msg"=>"success");
+         }else{
+         	return array("data"=>[],"msg"=>"failure");
+         }
+	}
+
+	public function actionDelmyvideo(){
+		$request = \Yii::$app->request;
+		$id=$request->post('id');
+		$delete=Yii::$app->db->createCommand()->update('probation_videos',
+        	[
+        	'status'=>0
+        	],
+        	'vId=:id',[':id' => $id])->execute();
+         if($delete){
+         	return array("data"=>$delete,"msg"=>"success");
+         }else{
+         	return array("data"=>[],"msg"=>"failure");
+         }
+	}
+
+	public function actionFileurl(){
+		//获取文件路径
+		$request = \Yii::$app->request;
+        $id=$request->post('id');
+        $query=(new Query())
+          ->select('*')
+          ->from('probation_files')
+          ->andWhere(['fId'=>$id])
+          ->andWhere(['status'=>1])
+          ->one();
+        if($query){
+        $url=explode(':',$query['path']);
+        $dir=explode('/',$url[1]);
+        $arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        $final =implode('/',$arr);
+        return array("data"=>$final,"msg"=>"success");
+    }else{
+        return false;
+    }
+	}
+
+	public function actionVideourl(){
+		//获取视频路径
+		$request = \Yii::$app->request;
+        $id=$request->post('id');
+        $query=(new Query())
+          ->select('*')
+          ->from('probation_videos')
+          ->andWhere(['vId'=>$id])
+          ->andWhere(['status'=>1])
+          ->one();
+        if($query){
+        $url=explode(':',$query['path']);
+        $dir=explode('/',$url[1]);
+        $arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        $final =implode('/',$arr);
+        return array("data"=>$final,"msg"=>"success");
+    }else{
+        return false;
+    }
+	}
+	public function actionGetvideo(){
+		//获取见习视频文件数据
+		$request = \Yii::$app->request;
+		$username=$request->post('username');
+		$type=$request->post('type');
+		$result=(new Query())
+		       ->select('*')
+		       ->from('probation_videos')
+		       ->andWhere(['username'=>$username])
+		       ->andWhere(['type'=>$type])
+		       ->andWhere(['status'=>1])
+		       ->all();
+		if($result){
+			return array("data"=>$result,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"failure");
+		}
+	}
+
 
 
 

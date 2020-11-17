@@ -203,7 +203,7 @@ class ProbationController extends Controller{
    	//获取学生信息
    	$request=\Yii::$app->request;
    	$currentpage=$request ->post('page');
-	$pageSize=8;
+	  $pageSize=8;
    	$studata=(new Query())
    	        ->select('*')
    	        ->from('student_info')
@@ -225,7 +225,7 @@ class ProbationController extends Controller{
    	$request = \Yii::$app->request;
    	$name=$request->post('tName');
    	$currentpage=$request ->post('page');
-	$pageSize=8;
+	  $pageSize=8;
    	$queryT=(new Query())
    	       ->select('*')
    	       ->from('teacher_info')
@@ -276,7 +276,7 @@ class ProbationController extends Controller{
    	$request = \Yii::$app->request;
    	$name=$request->post('tName');
    	$currentpage=$request ->post('page');
-	$pageSize=8;
+	  $pageSize=8;
    	$queryT=(new Query())
    	       ->select('*')
    	       ->from('tutor_info')
@@ -302,7 +302,7 @@ class ProbationController extends Controller{
    	$request = \Yii::$app->request;
    	$name=$request->post('name');
    	$currentpage=$request ->post('page');
-	$pageSize=8;
+	  $pageSize=8;
    	$queryS=(new Query())
    	       ->select('*')
    	       ->from('student_info')

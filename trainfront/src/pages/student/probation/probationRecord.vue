@@ -1,7 +1,7 @@
 <template>
   <div class="display" id="maintop">
     <el-tabs  :tab-position="tabPosition" v-model="activeName" @tab-click="handleClick" style="height: fit-content;">
-      <el-tab-pane label="课堂教学观摩记录" name="first" >
+      <el-tab-pane label="课堂教学观摩记录" name="first">
         <div class="record1">
           <div class="detail" id="pdfDom">
           <el-form ref="form" :model="recordForm1" :info="printDetail" label-width="80px">
@@ -27,7 +27,7 @@
                 <el-option label="星期四" value="4"></el-option>
                 <el-option label="星期五" value="5"></el-option>
                 <el-option label="星期六" value="6"></el-option>
-                <el-option label="星期日" value="6"></el-option>
+                <el-option label="星期日" value="7"></el-option>
               </el-select>
             </el-form-item>
             <el-form-item label="见习班级:" style="width:400px;" prop="className">
@@ -81,8 +81,10 @@
           </div>
           <div class="actions">
             <el-button size="small" @click="setPrintDetail()" style="background-color:tan;margin-right: 50px" type="primary" >预览</el-button>
-            <el-button type="primary" @click="recordSubmit" size="small" style="background-color:#839206;margin-right: 50px">保存</el-button>
+            <el-button type="primary" @click="saveLocal" size="small" style="background-color:#839206;margin-right:50px">保存</el-button>
+            <el-button type="primary" @click="recordSubmit" size="small" style="background-color:goldenrod;margin-right:50px">提交</el-button>
             <el-button type="primary" @click="reset" size="small" style="background-color:darkcyan">重置</el-button>
+            <el-button type="primary" @click="test" size="small" style="background-color:darkcyan">测试</el-button>
           </div>
         </div>
       </el-tab-pane>
@@ -96,6 +98,7 @@
 </template>
 
 <script>
+    import htmlToPdf from"../../utils/htmlToPdf"
     import { quillEditor } from 'vue-quill-editor'
     import * as Quill from 'quill'  //引入编辑器
     //quill编辑器的字体
@@ -108,6 +111,8 @@
         name: "probationRecord",
         data(){
             return{
+                username:'',//用户名
+                currentTime:'',//当前时间
                 printDetail:'',
                 activeName:"first",
                 tabPosition: 'left',
@@ -152,13 +157,16 @@
                             // ['link','image','video']        //上传图片、上传视频
                         ]
                     }
-                }
+                },
+                fileData:[]
             }
         },
         methods:{
             handleClick(tab, event) {
                 if(this.activeName=="second"){
                   this.$router.push('/student/probation/probationRecord1')
+                }else if(this.activeName=="third"){
+                  this.$router.push('/student/probation/probationRecord2')
                 }
             },
             onEditorBlur(){//失去焦点事件
@@ -167,8 +175,83 @@
             },
             onEditorChange(){//内容改变事件
             },
+            saveLocal(){
+                //保存到本地
+                this.$confirm('请先预览，确保无误后再保存到本地?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(()=>{
+                    this.currentTime= this.format(new Date(), "yyyy-MM-dd HH:mm:ss");//获取当前时间
+                    htmlToPdf.downloadPDF(document.querySelector('#pdfDom'), this.currentTime)//以当前时间作为文件名
+           })
+            },
             recordSubmit(){
-
+                //上传到数据库
+                this.$confirm('请先预览，确保无误后再上传?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(()=>{
+                    let that = this
+                    if(that.recordForm1.type=="1"){
+                        that.recordForm1.type="网络见习"
+                    }else if(that.recordForm1.type=="2"){
+                        that.recordForm1.type="学校见习"
+                    }
+                    if(that.recordForm1.weekday=="1"){
+                        that.recordForm1.weekday="星期一"
+                    }else if(that.recordForm1.weekday=="2"){
+                        that.recordForm1.weekday="星期二"
+                    }else if(that.recordForm1.weekday=="3"){
+                        that.recordForm1.weekday="星期三"
+                    }else if(that.recordForm1.weekday=="4"){
+                        that.recordForm1.weekday="星期四"
+                    }else if(that.recordForm1.weekday=="5"){
+                        that.recordForm1.weekday="星期五"
+                    }else if(that.recordForm1.weekday=="6"){
+                        that.recordForm1.weekday="星期六"
+                    }else if(that.recordForm1.weekday=="7"){
+                        that.recordForm1.weekday="星期日"
+                    }
+                    if(that.recordForm1.classform=="1"){
+                        that.recordForm1.classform="新授课"
+                    }else if(that.recordForm1.classform=="2"){
+                        that.recordForm1.classform="复习课"
+                    }else if(that.recordForm1.classform=="3"){
+                        that.recordForm1.classform="实验课"
+                    }else if(that.recordForm1.classform=="4"){
+                        that.recordForm1.classform="活动课"
+                    }
+                    that.recordForm1.content1= that.recordForm1.content1.replace("<p>", "")
+                    that.recordForm1.content2= that.recordForm1.content2.replace("<p>", "")
+                    that.recordForm1.content3= that.recordForm1.content3.replace("<p>", "")
+                    that.recordForm1.content1= that.recordForm1.content1.replace("</p>", "")
+                    that.recordForm1.content2= that.recordForm1.content2.replace("</p>", "")
+                    that.recordForm1.content3= that.recordForm1.content3.replace("</p>", "")
+                    that.$http.post('/yii/record/record/submitrecord',{
+                        username:that.username,
+                        type:that.recordForm1.type,
+                        date:that.recordForm1.date,
+                        weekday:that.recordForm1.weekday,
+                        className:that.recordForm1.className,
+                        instructor:that.recordForm1.instructor,
+                        theme:that.recordForm1.theme,
+                        classform:that.recordForm1.classform,
+                        content1:that.recordForm1.content1,
+                        content2:that.recordForm1.content2,
+                        content3:that.recordForm1.content3,
+                        submitTime:that.format(new Date(), "yyyy-MM-dd HH:mm:ss")
+                    }).then((res)=>{
+                        console.log(res.data)
+                        if(res.data.message=="success"){
+                            alert("提交成功!")
+                            this.savefile(res.data.data)
+                        }else{
+                            alert("提交失败!")
+                        }
+                    })
+                })
             },
             reset(){
                 this.$refs.form.resetFields();
@@ -183,7 +266,46 @@
                         this.getPdf(document.querySelector('#pdfDom'));//在main中导入，所以可以直接使用
                     })
                 }
+            },
+            //定义时间
+            format(date, fmt) {
+                let o = {
+                    "M+": date.getMonth() + 1, //月份
+                    "d+": date.getDate(), //日
+                    "H+": date.getHours(), //小时
+                    "m+": date.getMinutes(), //分
+                    "s+": date.getSeconds(), //秒
+                    "q+": Math.floor((date.getMonth() + 3) / 3), //季度
+                    "S": date.getMilliseconds() //毫秒
+                };
+                if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+                for (let k in o)
+                    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                return fmt;
+            },
+            savefile(time){
+                //显示PDF测试
+                let that = this
+                that.$http.post('/yii/record/record/exportpdf',{
+                    time:time,
+                    username:that.username
+                }).then((res)=>{
+                    console.log(res.data)
+                })
+            },
+            test(){
+                let that = this
+                that.$http.post('/yii/record/record/getpdf',{
+                    uId:1
+                }).then((res)=>{
+                    console.log(res.data.data)
+                    var url='127.0.0.1/'+res.data.data
+                    window.open('http://'+url)
+              })
             }
+        },
+        created(){
+            this.username=this.$store.getters.getsName
         },
         mounted() {
             //在生命周期函数中调用，实现了鼠标悬停按钮完成tooltip提示

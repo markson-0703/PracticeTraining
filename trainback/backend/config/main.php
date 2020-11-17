@@ -26,6 +26,9 @@ return [
         ],
         'probation'=> [
             'class' => 'backend\module\probation\Module',
+        ],
+        'record'=> [
+            'class' => 'backend\module\record\Module',
         ]
     ],
     'components' => [

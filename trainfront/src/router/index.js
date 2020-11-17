@@ -25,7 +25,10 @@ import StudentManage from "../pages/teacher/probation/studentManage";
 import Process from "../pages/student/probation/process";
 import ActivityArrange from"../pages/administrator/probation/activityArrange";
 import ProbationRecord from"../pages/student/probation/probationRecord";
-import ProbationRecord1 from"../pages/student/probation/probationRecord1"
+import ProbationRecord1 from"../pages/student/probation/probationRecord1";
+import ProbationRecord2 from"../pages/student/probation/probationRecord2";
+import ResourceManage from "../pages/student/probation/resourceManage";
+
 Vue.use(Router)
 const  router = new Router({
   mode:'history',
@@ -184,6 +187,11 @@ const  router = new Router({
           component: Process
         },
         {
+          path:'/student/probation/resourceManage',
+          name:'ResourceManage',
+          component: ResourceManage
+        },
+        {
           path:'/student/probation/probationRecord',
           name:'ProbationRecord',
           component: ProbationRecord
@@ -192,6 +200,11 @@ const  router = new Router({
           path:'/student/probation/probationRecord1',
           name:'ProbationRecord1',
           component: ProbationRecord1
+        },
+        {
+          path:'/student/probation/probationRecord2',
+          name:'ProbationRecord2',
+          component: ProbationRecord2
         }
       ]
     },

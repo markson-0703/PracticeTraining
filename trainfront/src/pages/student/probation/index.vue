@@ -10,8 +10,12 @@
           <el-menu-item index="process">见习历程</el-menu-item>
           <el-menu-item index="probationRecord">见习记录</el-menu-item>
         </el-submenu>
-        <el-menu-item index="4">见习资源管理</el-menu-item>
-        <el-menu-item index="5">见习工作的自我评价</el-menu-item>
+        <el-submenu index="4">
+          <template slot="title">见习资源管理</template>
+          <el-menu-item index="recordManage">见习记录管理</el-menu-item>
+          <el-menu-item index="resourceManage">教学资源管理</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="5">见习工作的评价</el-menu-item>
         <el-menu-item index="6">见习反馈</el-menu-item>
         <el-menu-item index="my">个人中心</el-menu-item>
         <el-menu-item index="8" @click="logout()">退出登录</el-menu-item>
