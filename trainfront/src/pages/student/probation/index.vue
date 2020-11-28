@@ -9,6 +9,7 @@
           <template slot="title">教学实践记录</template>
           <el-menu-item index="process">见习历程</el-menu-item>
           <el-menu-item index="probationRecord">见习记录</el-menu-item>
+          <el-menu-item index="myConclusion">见习总结</el-menu-item>
         </el-submenu>
         <el-submenu index="4">
           <template slot="title">见习资源管理</template>

@@ -74,6 +74,7 @@
                 activeName:"third",
                 tabPosition: 'left',
                 printDetail2:'',
+                currentTime:'',//当前时间
                 username:'',
                 recordForm3:{
                     school_name:'',
@@ -136,6 +137,12 @@
                     this.$router.push('/student/probation/probationRecord')
                 }else if(this.activeName=="second"){
                     this.$router.push('/student/probation/probationRecord1')
+                }else if(this.activeName=="fourth"){
+                    this.$router.push('/student/probation/probationRecord3')
+                }else if(this.activeName=="fifth"){
+                    this.$router.push('/student/probation/probationRecord4')
+                }else if(this.activeName=="sixth"){
+                    this.$router.push('/student/probation/probationRecord5')
                 }
             },
             onEditorBlur(){//失去焦点事件
@@ -175,10 +182,8 @@
                 }).then(()=>{
                     let that = this
                     //去除富文本编辑器的p标签
-                    that.recordForm3.content1= that.recordForm3.content1.replace("<p>", "")
-                    that.recordForm3.content2= that.recordForm3.content2.replace("<p>", "")
-                    that.recordForm3.content1= that.recordForm3.content1.replace("</p>", "")
-                    that.recordForm3.content2= that.recordForm3.content2.replace("</p>", "")
+                    that.recordForm3.content1= that.recordForm3.content1.replace(/<[^>]+>/g, "")
+                    that.recordForm3.content2= that.recordForm3.content2.replace(/<[^>]+>/g, "")
                     that.$http.post('/yii/record/template/submitrecord2',{
                         username:that.username,
                         school_name:that.recordForm3.school_name,

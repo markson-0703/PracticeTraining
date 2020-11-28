@@ -4386,3 +4386,2991 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1605576323.149
     'REQUEST_TIME' => 1605576323
 ]
+2020-11-18 08:56:31 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '}', expecting end of file in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\record\controllers\TemplateController.php:325
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('template')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('submitrecord2')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('template/submit...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('record/template...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-18 08:56:31 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8081/student/probation/probationRecord2'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '255'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '22718'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/record/template/submitrecord2'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/record/template/submitrecord2'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\record\\template\\submitrecord2'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/record/template/submitrecord2'
+    'REQUEST_TIME_FLOAT' => 1605660991.252
+    'REQUEST_TIME' => 1605660991
+]
+2020-11-18 10:03:26 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-18 10:03:26 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => '5d623be67142971bfc46b504bda0e6e9b2dec56f38ee5a216096f91d5a826de4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"zLRkYKmj76EU_vGh9wQKSEMdWt1_apYP\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=5d623be67142971bfc46b504bda0e6e9b2dec56f38ee5a216096f91d5a826de4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22zLRkYKmj76EU_vGh9wQKSEMdWt1_apYP%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '29225'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1605665006.61
+    'REQUEST_TIME' => 1605665006
+]
+2020-11-19 10:07:34 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-19 10:07:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => 'a4b19ae4b405f23c66caf9c41c27c4689ae80ee6aa67fc3905bfb7ba72763dcea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"59TnhR9mh_jevzhBO26Yyje3bBNVDRVT\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=a4b19ae4b405f23c66caf9c41c27c4689ae80ee6aa67fc3905bfb7ba72763dcea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%2259TnhR9mh_jevzhBO26Yyje3bBNVDRVT%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '39862'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1605751654.534
+    'REQUEST_TIME' => 1605751654
+]
+2020-11-19 10:32:54 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected ''status'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\record\controllers\TemplateController.php:233
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('template')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('submitrecord4')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('template/submit...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('record/template...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-19 10:32:54 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => 'a4b19ae4b405f23c66caf9c41c27c4689ae80ee6aa67fc3905bfb7ba72763dcea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"59TnhR9mh_jevzhBO26Yyje3bBNVDRVT\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=a4b19ae4b405f23c66caf9c41c27c4689ae80ee6aa67fc3905bfb7ba72763dcea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%2259TnhR9mh_jevzhBO26Yyje3bBNVDRVT%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8081/student/probation/probationRecord4'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '416'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '41777'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/record/template/submitrecord4'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/record/template/submitrecord4'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\record\\template\\submitrecord4'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/record/template/submitrecord4'
+    'REQUEST_TIME_FLOAT' => 1605753174.645
+    'REQUEST_TIME' => 1605753174
+]
+2020-11-21 09:59:39 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-21 09:59:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '28488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1605923979.491
+    'REQUEST_TIME' => 1605923979
+]
+2020-11-21 09:59:52 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\module\template\controllers\TemplateController' in file: D:\xampp\htdocs\PracticeTraining\trainback/backend/module/template/controllers/TemplateController.php. Namespace missing? in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('template')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('index')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('template/index')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/templa...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-21 09:59:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '28520'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/template/index'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/template/index'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\template\\index'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/template/index'
+    'REQUEST_TIME_FLOAT' => 1605923992.45
+    'REQUEST_TIME' => 1605923992
+]
+2020-11-21 11:18:49 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: file in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\TemplateController.php:25
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\TemplateController.php(25): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 25, Array)
+#1 [internal function]: backend\module\template\controllers\TemplateController->actionUploadtemplate()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('uploadtemplate', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/templa...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-21 11:18:49 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => '6dd4cea5d5a2f2751e5e54125eee521044d7c37ef8311c9a8afb44ebe8e5cbeaa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cuzCW9RRyKRNLz4NqyzeB5diWvx7Z5jl\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=6dd4cea5d5a2f2751e5e54125eee521044d7c37ef8311c9a8afb44ebe8e5cbeaa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cuzCW9RRyKRNLz4NqyzeB5diWvx7Z5jl%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '35654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/template/uploadtemplate'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/template/uploadtemplate'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\template\\uploadtemplate'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/template/uploadtemplate'
+    'REQUEST_TIME_FLOAT' => 1605928728.928
+    'REQUEST_TIME' => 1605928728
+]
+2020-11-23 10:00:57 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-23 10:00:57 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '7671'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606096857.685
+    'REQUEST_TIME' => 1606096857
+]
+2020-11-23 17:31:34 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: request in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\TemplateController.php:73
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\TemplateController.php(73): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 73, Array)
+#1 [internal function]: backend\module\template\controllers\TemplateController->actionUploadtemplate1()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('uploadtemplate1', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/templa...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-23 17:31:34 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'root'
+    'kind' => '1'
+]
+
+$_FILES = [
+    'file' => [
+        'name' => 'æ­¥éª¤æˆªå›¾.docx'
+        'type' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        'tmp_name' => 'D:\\xampp\\tmp\\php29B8.tmp'
+        'error' => 0
+        'size' => 406150
+    ]
+]
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/administrator/probation/my'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary9m35Ml7ABkl7dlE3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '406593'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9221'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/template/uploadtemplate1'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/template/uploadtemplate1'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\template\\uploadtemplate1'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/template/uploadtemplate1'
+    'REQUEST_TIME_FLOAT' => 1606123894.03
+    'REQUEST_TIME' => 1606123894
+]
+2020-11-23 19:52:30 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: template/template/teatemplate in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php:151
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('teatemplate', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/templa...', Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-23 19:52:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/administrator/probation/my'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '29557'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/template/teatemplate'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/template/teatemplate'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\template\\teatemplate'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/template/teatemplate'
+    'REQUEST_TIME_FLOAT' => 1606132349.943
+    'REQUEST_TIME' => 1606132349
+]
+2020-11-23 20:35:24 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: template/mould/getteatemplate in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php:151
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('getteatemplate', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/mould/...', Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-23 20:35:24 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/directionRecord'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '21'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '33741'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/getteatemplate'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/mould/getteatemplate'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\mould\\getteatemplate'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/getteatemplate'
+    'REQUEST_TIME_FLOAT' => 1606134924.233
+    'REQUEST_TIME' => 1606134924
+]
+2020-11-23 20:48:24 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: msg in D:\xampp\htdocs\PracticeTraining\trainback\backend\config\main.php:58
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\config\main.php(58): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 58, Array)
+#1 [internal function]: {closure}(Object(yii\base\Event))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Object(Closure), Object(yii\base\Event))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Response.php(336): yii\base\Component->trigger('beforeSend')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#5 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2020-11-23 20:48:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '20043'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/getteatemplate'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/mould/getteatemplate'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\mould\\getteatemplate'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/getteatemplate'
+    'REQUEST_TIME_FLOAT' => 1606135704.5
+    'REQUEST_TIME' => 1606135704
+]
+2020-11-23 21:02:08 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: template/mould/downTemplate in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php:151
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('downTemplate', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/mould/...', Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-23 21:02:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '21377'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/downTemplate'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/mould/downTemplate'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\mould\\downTemplate'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/downTemplate'
+    'REQUEST_TIME_FLOAT' => 1606136527.957
+    'REQUEST_TIME' => 1606136527
+]
+2020-11-23 21:24:51 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: record/record/uploadtearecord in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php:151
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('uploadtearecord', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('record/record/u...', Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-23 21:24:51 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'username' => 'shiyu'
+    'kind' => '1'
+    'type' => '1'
+]
+
+$_FILES = [
+    'file' => [
+        'name' => 'åŠŸèƒ½è¯´æ˜Ž.docx'
+        'type' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        'tmp_name' => 'D:\\xampp\\tmp\\phpBF3F.tmp'
+        'error' => 0
+        'size' => 562625
+    ]
+]
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/directionRecord'
+    'HTTP_ACCEPT' => '*/*'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary8wfm1EDFUuJRGWQE'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '563161'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '23622'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/record/record/uploadtearecord'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/record/record/uploadtearecord'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\record\\record\\uploadtearecord'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/record/record/uploadtearecord'
+    'REQUEST_TIME_FLOAT' => 1606137891.498
+    'REQUEST_TIME' => 1606137891
+]
+2020-11-23 21:42:40 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected ';', expecting ']' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\MouldController.php:92
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('mould')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('uploadtearecord')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('mould/uploadtea...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/mould/...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-23 21:42:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => '781f2bfab6eaa412f2645439ac6bdb164182675534b20a3435c96867bfe2ada5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xdM3pOzW6H01UaQUDhWDCF6KfeLiVPeA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=781f2bfab6eaa412f2645439ac6bdb164182675534b20a3435c96867bfe2ada5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xdM3pOzW6H01UaQUDhWDCF6KfeLiVPeA%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '25325'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/uploadtearecord'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/mould/uploadtearecord'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\mould\\uploadtearecord'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/uploadtearecord'
+    'REQUEST_TIME_FLOAT' => 1606138959.793
+    'REQUEST_TIME' => 1606138959
+]
+2020-11-23 21:43:19 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: file in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\MouldController.php:68
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\template\controllers\MouldController.php(68): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 68, Array)
+#1 [internal function]: backend\module\template\controllers\MouldController->actionUploadtearecord()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('uploadtearecord', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('template/mould/...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-23 21:43:19 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+    '_csrf-frontend' => '781f2bfab6eaa412f2645439ac6bdb164182675534b20a3435c96867bfe2ada5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xdM3pOzW6H01UaQUDhWDCF6KfeLiVPeA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9; _csrf-frontend=781f2bfab6eaa412f2645439ac6bdb164182675534b20a3435c96867bfe2ada5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xdM3pOzW6H01UaQUDhWDCF6KfeLiVPeA%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '25392'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/uploadtearecord'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/template/mould/uploadtearecord'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\template\\mould\\uploadtearecord'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/template/mould/uploadtearecord'
+    'REQUEST_TIME_FLOAT' => 1606138998.872
+    'REQUEST_TIME' => 1606138998
+]
+2020-11-25 09:05:49 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-25 09:05:49 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '14550'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606266348.905
+    'REQUEST_TIME' => 1606266348
+]
+2020-11-25 10:55:57 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\module\resource\controllers\ResourceController' in file: D:\xampp\htdocs\PracticeTraining\trainback/backend/module/resource/controllers/ResourceController.php. Namespace missing? in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('resource')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('index')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('resource/index')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-25 10:55:57 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '37918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/index'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/index'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\index'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/index'
+    'REQUEST_TIME_FLOAT' => 1606272957.08
+    'REQUEST_TIME' => 1606272957
+]
+2020-11-25 15:41:15 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '++' (T_INC), expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:39
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('resource')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('studentinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('resource/studen...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-25 15:41:15 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '65222'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606290074.9
+    'REQUEST_TIME' => 1606290074
+]
+2020-11-25 15:42:53 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: array_push() expects parameter 1 to be array, null given in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'array_push() ex...', 'D:\\xampp\\htdocs...', 61, Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(61): array_push(NULL, 'chengqi')
+#2 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-25 15:42:53 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '65377'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606290173.108
+    'REQUEST_TIME' => 1606290173
+]
+2020-11-25 15:55:22 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:67
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 67, Array)
+#1 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-25 15:55:21 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '32115'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606290921.775
+    'REQUEST_TIME' => 1606290921
+]
+2020-11-25 15:56:23 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:67
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 67, Array)
+#1 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-25 15:56:22 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '32209'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606290982.496
+    'REQUEST_TIME' => 1606290982
+]
+2020-11-25 16:11:57 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: review in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:62
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(62): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 62, Array)
+#1 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-25 16:11:57 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '33886'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606291916.965
+    'REQUEST_TIME' => 1606291916
+]
+2020-11-25 20:14:03 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php:710
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(710): PDO->__construct('mysql:host=139....', 'cm', 'cm', NULL)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#11 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(157): yii\db\Connection->getQueryBuilder()
+#13 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(285): yii\db\Query->createCommand(Object(yii\db\Connection))
+#14 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(28): yii\db\Query->one()
+#15 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#16 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#18 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#19 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#20 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php:642
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#9 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(157): yii\db\Connection->getQueryBuilder()
+#11 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(285): yii\db\Query->createCommand(Object(yii\db\Connection))
+#12 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(28): yii\db\Query->one()
+#13 [internal function]: backend\module\resource\controllers\ResourceController->actionStudentinfo()
+#14 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#16 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('studentinfo', Array)
+#17 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#18 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2020-11-25 20:13:42 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '40158'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/studentinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\studentinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/studentinfo'
+    'REQUEST_TIME_FLOAT' => 1606306422.237
+    'REQUEST_TIME' => 1606306422
+]
+2020-11-26 09:25:59 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-26 09:25:59 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '27157'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606353959.552
+    'REQUEST_TIME' => 1606353959
+]
+2020-11-26 10:03:53 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected ';', expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:94
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('resource')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('recordinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('resource/record...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-26 10:03:53 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '30698'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/recordinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/recordinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\recordinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/recordinfo'
+    'REQUEST_TIME_FLOAT' => 1606356233.751
+    'REQUEST_TIME' => 1606356233
+]
+2020-11-26 10:05:40 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: i in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:94
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(94): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 94, Array)
+#1 [internal function]: backend\module\resource\controllers\ResourceController->actionRecordinfo()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('recordinfo', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-26 10:05:40 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/record'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '22'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '30858'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/recordinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/recordinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\recordinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/recordinfo'
+    'REQUEST_TIME_FLOAT' => 1606356340.038
+    'REQUEST_TIME' => 1606356340
+]
+2020-11-26 21:10:03 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected 'execute' (T_STRING) in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:300
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('resource')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('submitreview')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('resource/submit...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-26 21:10:02 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '40724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/submitreview'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/submitreview'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\submitreview'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/submitreview'
+    'REQUEST_TIME_FLOAT' => 1606396202.79
+    'REQUEST_TIME' => 1606396202
+]
+2020-11-28 09:56:45 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-28 09:56:45 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/PracticeTraining/trainback/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '7615'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606528605.429
+    'REQUEST_TIME' => 1606528605
+]
+2020-11-28 10:17:31 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:46
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('basicinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/bas...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:17:31 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9537'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606529851.656
+    'REQUEST_TIME' => 1606529851
+]
+2020-11-28 10:17:49 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:46
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('basicinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/bas...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:17:49 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9566'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606529869.797
+    'REQUEST_TIME' => 1606529869
+]
+2020-11-28 10:18:04 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:46
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('basicinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/bas...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:18:04 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9590'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606529884.056
+    'REQUEST_TIME' => 1606529884
+]
+2020-11-28 10:18:44 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:46
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('basicinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/bas...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:18:44 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606529924.712
+    'REQUEST_TIME' => 1606529924
+]
+2020-11-28 10:19:17 [127.0.0.1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator '' requires two operands. in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#8 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(157): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#9 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(248): yii\db\Query->createCommand(Object(yii\db\Connection))
+#10 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php(48): yii\db\Query->all()
+#11 [internal function]: backend\module\resource\controllers\DocumentionController->actionBasicinfo()
+#12 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#14 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('basicinfo', Array)
+#15 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#16 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#18 {main}
+2020-11-28 10:19:17 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '9711'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606529957.269
+    'REQUEST_TIME' => 1606529957
+]
+2020-11-28 10:25:09 [127.0.0.1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator '' requires two operands. in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\SimpleCondition.php:79
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1606): yii\db\conditions\SimpleCondition::fromArrayDefinition('', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\conditions\ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#8 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(157): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#9 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\db\Query.php(248): yii\db\Query->createCommand(Object(yii\db\Connection))
+#10 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php(48): yii\db\Query->all()
+#11 [internal function]: backend\module\resource\controllers\DocumentionController->actionBasicinfo()
+#12 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#14 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('basicinfo', Array)
+#15 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#16 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#18 {main}
+2020-11-28 10:25:08 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '10241'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606530308.714
+    'REQUEST_TIME' => 1606530308
+]
+2020-11-28 10:26:18 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:47
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('basicinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/bas...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:26:18 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '20'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '10343'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/basicinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\basicinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/basicinfo'
+    'REQUEST_TIME_FLOAT' => 1606530377.843
+    'REQUEST_TIME' => 1606530377
+]
+2020-11-28 10:57:52 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '}', expecting ';' in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:85
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('documention')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('fileinfo')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('documention/fil...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 10:57:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '13100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/fileinfo'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/fileinfo'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\fileinfo'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/fileinfo'
+    'REQUEST_TIME_FLOAT' => 1606532272.183
+    'REQUEST_TIME' => 1606532272
+]
+2020-11-28 11:11:56 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: filedir in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php:101
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\DocumentionController.php(101): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 101, Array)
+#1 [internal function]: backend\module\resource\controllers\DocumentionController->actionTheirurl()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('theirurl', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/docume...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-28 11:11:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/teacher/probation/resource'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '14352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/theirurl'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/documention/theirurl'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\documention\\theirurl'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/documention/theirurl'
+    'REQUEST_TIME_FLOAT' => 1606533116.537
+    'REQUEST_TIME' => 1606533116
+]
+2020-11-28 20:27:44 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '$querycount' (T_VARIABLE) in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:330
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\module\\...')
+#1 [internal function]: spl_autoload_call('backend\\module\\...')
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(637): class_exists('backend\\module\\...')
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('resource')
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('allteafile')
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('resource/alltea...')
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#7 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2020-11-28 20:27:44 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/administrator/probation/teacherFile'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '60850'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/allteafile'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/allteafile'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\allteafile'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/allteafile'
+    'REQUEST_TIME_FLOAT' => 1606566464.425
+    'REQUEST_TIME' => 1606566464
+]
+2020-11-28 20:28:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: request in D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php:319
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\backend\module\resource\controllers\ResourceController.php(319): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 319, Array)
+#1 [internal function]: backend\module\resource\controllers\ResourceController->actionAllteafile()
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('allteafile', Array)
+#5 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#6 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2020-11-28 20:28:25 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost:8080/administrator/probation/teacherFile'
+    'CONTENT_TYPE' => 'application/json;charset=UTF-8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at 127.0.0.1 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '60920'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/allteafile'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/allteafile'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\allteafile'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/allteafile'
+    'REQUEST_TIME_FLOAT' => 1606566505.556
+    'REQUEST_TIME' => 1606566505
+]
+2020-11-28 20:40:42 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: resource/resource/teafileurl in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Controller.php:151
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('teafileurl', Array)
+#1 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('resource/resour...', Array)
+#2 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: é¡µé¢æœªæ‰¾åˆ°ã€‚ in D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\xampp\htdocs\PracticeTraining\trainback\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\xampp\htdocs\PracticeTraining\trainback\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-11-28 20:40:42 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Webstorm-ced8f16d' => '50552abb-768d-4caf-b37a-e0e37b2715e9'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Webstorm-ced8f16d=50552abb-768d-4caf-b37a-e0e37b2715e9'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;E:\\composer;E:\\ffmpeg\\bin;D:\\Program Files\\Java\\jdk\\bin;D:\\Program Files\\Java\\jdk\\jre\\bin;D:\\Program Files\\tomcat\\lib;D:\\Program Files\\tomcat\\bin;D:\\Program Files\\apache-maven-3.5.2\\bin;D:\\Program Files\\Git\\cmd;D:\\Python34;D:\\Python34\\Scripts;C:\\Program Files\\nodejs\\;C:\\strawberry\\c\\bin;C:\\strawberry\\perl\\bin;D:\\Program Files\\Git\\usr\\bin;C:\\composer;E:\\xampp\\php;D:\\composer;C:\\Users\\ChenM\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ChenM\\AppData\\Roaming\\npm;D:\\Program Files\\Git\\usr\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/PracticeTraining/trainback/backend/web/index.php'
+    'REMOTE_PORT' => '62080'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/teafileurl'
+    'SCRIPT_NAME' => '/PracticeTraining/trainback/backend/web/index.php'
+    'PATH_INFO' => '/resource/resource/teafileurl'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\resource\\resource\\teafileurl'
+    'PHP_SELF' => '/PracticeTraining/trainback/backend/web/index.php/resource/resource/teafileurl'
+    'REQUEST_TIME_FLOAT' => 1606567242.43
+    'REQUEST_TIME' => 1606567242
+]

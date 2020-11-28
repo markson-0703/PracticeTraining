@@ -29,6 +29,12 @@ return [
         ],
         'record'=> [
             'class' => 'backend\module\record\Module',
+        ],
+        'template'=> [
+            'class' => 'backend\module\template\Module',
+        ],
+        'resource'=> [
+            'class' => 'backend\module\resource\Module',
         ]
     ],
     'components' => [

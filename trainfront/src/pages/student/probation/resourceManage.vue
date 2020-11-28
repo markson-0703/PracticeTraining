@@ -171,7 +171,6 @@
                         type: 'warning'
                     });
                 }
-
             },
             uploadError(){
                 this.$refs.uploadForm.clearFiles();
@@ -358,5 +357,4 @@
     font-size: 14px;
     word-wrap: break-word;
   }
-
 </style>

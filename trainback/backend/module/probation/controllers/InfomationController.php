@@ -392,6 +392,44 @@ class InfomationController extends Controller{
 		}
 	}
 
+	public function actionGetflag(){
+		$request = \Yii::$app->request;
+		$username=$request->post('username');
+		$result=(new Query())
+		       ->select('*')
+		       ->from('probation_files')
+		       ->andWhere(['username'=>$username])
+		       ->andWhere(['status'=>2])
+		       ->one();
+		if($result){
+			return array("data"=>$result,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"failure");
+		}
+	}
+
+	public function actionGetconclusion(){
+		//获取见习总结
+		$request = \Yii::$app->request;
+		$username=$request->post('username');
+		$status=$request->post('status');
+		$query=(new Query())
+          ->select('*')
+          ->from('probation_files')
+          ->andWhere(['username'=>$username])
+          ->andWhere(['status'=>$status])
+          ->one();
+       if($query){
+        $url=explode(':',$query['path']);
+        $dir=explode('/',$url[1]);
+        $arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        $final =implode('/',$arr);
+        return array("data"=>$final,"msg"=>"success");
+      }else{
+        return false;
+      }
+	}
+
 
 
 

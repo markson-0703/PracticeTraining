@@ -104,6 +104,7 @@
             return {
                 activeName:"second",
                 tabPosition: 'left',
+                currentTime:'',//当前时间
                 printDetail1:'',
                 username:'',
                 recordForm2: {
@@ -172,6 +173,12 @@
                     this.$router.push('/student/probation/probationRecord')
                 }else if(this.activeName=="third"){
                     this.$router.push('/student/probation/probationRecord2')
+                }else if(this.activeName=="fourth"){
+                    this.$router.push('/student/probation/probationRecord3')
+                }else if(this.activeName=="fifthth"){
+                    this.$router.push('/student/probation/probationRecord4')
+                }else if(this.activeName=="sixth"){
+                    this.$router.push('/student/probation/probationRecord5')
                 }
             },
             onEditorBlur(){//失去焦点事件
@@ -239,10 +246,8 @@
                     }else if(that.recordForm2.classform=="4"){
                         that.recordForm2.classform="活动课"
                     }
-                    that.recordForm2.content1= that.recordForm2.content1.replace("<p>", "")
-                    that.recordForm2.content2= that.recordForm2.content2.replace("<p>", "")
-                    that.recordForm2.content1= that.recordForm2.content1.replace("</p>", "")
-                    that.recordForm2.content2= that.recordForm2.content2.replace("</p>", "")
+                    that.recordForm2.content1= that.recordForm2.content1.replace(/<[^>]+>/g, "")
+                    that.recordForm2.content2= that.recordForm2.content2.replace(/<[^>]+>/g, "")
                     that.$http.post('/yii/record/template/submitrecord1',{
                         username:that.username,
                         type:that.recordForm2.type,

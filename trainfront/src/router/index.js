@@ -27,11 +27,29 @@ import ActivityArrange from"../pages/administrator/probation/activityArrange";
 import ProbationRecord from"../pages/student/probation/probationRecord";
 import ProbationRecord1 from"../pages/student/probation/probationRecord1";
 import ProbationRecord2 from"../pages/student/probation/probationRecord2";
+import ProbationRecord3 from"../pages/student/probation/probationRecord3";
+import ProbationRecord4 from"../pages/student/probation/probationRecord4";
+import ProbationRecord5 from"../pages/student/probation/probationRecord5";
 import ResourceManage from "../pages/student/probation/resourceManage";
+import RecordManage from "../pages/student/probation/recordManage";
+import MyConclusion from "../pages/student/probation/myConclusion";
+import DirectionRecord from "../pages/teacher/probation/directionRecord";
+import Record from "../pages/teacher/probation/record";
+import Resource from "../pages/teacher/probation/resource";
+import Instruction from "../pages/teacher/probation/instruction";
+import StudentFile from "../pages/administrator/probation/studentFile";
+import TeacherFile from "../pages/administrator/probation/teacherFile";
 
 Vue.use(Router)
 const  router = new Router({
   mode:'history',
+  scrollBehavior(to,from,saveTop){
+       if(saveTop){
+         return saveTop
+       }else{
+         return{x:0,y:0}
+       }
+  },
   routes: [
     {
       //测试
@@ -143,6 +161,16 @@ const  router = new Router({
           path: '/administrator/probation/activityArrange',
           name: 'ActivityArrange',
           component: ActivityArrange
+        },
+        {
+          path: '/administrator/probation/studentFile',
+          name: 'StudentFile',
+          component: StudentFile
+        },
+        {
+          path: '/administrator/probation/teacherFile',
+          name: 'TeacherFile',
+          component: TeacherFile
         }
       ]
     },
@@ -153,14 +181,7 @@ const  router = new Router({
       meta:{
         isLogin:true,
       },
-      component:PracticeIndex,
-      children:[
-        {
-          path: '/administrator/probation/my',
-          name: 'My',
-          component: My
-        }
-      ]
+      component:PracticeIndex
     },
     {
       //学生见习首页
@@ -205,6 +226,31 @@ const  router = new Router({
           path:'/student/probation/probationRecord2',
           name:'ProbationRecord2',
           component: ProbationRecord2
+        },
+        {
+          path:'/student/probation/probationRecord3',
+          name:'ProbationRecord3',
+          component: ProbationRecord3
+        },
+        {
+          path:'/student/probation/probationRecord4',
+          name:'ProbationRecord4',
+          component: ProbationRecord4
+        },
+        {
+          path:'/student/probation/probationRecord5',
+          name:'ProbationRecord5',
+          component: ProbationRecord5
+        },
+        {
+          path:'/student/probation/recordManage',
+          name:'RecordManage',
+          component: RecordManage
+        },
+        {
+          path:'/student/probation/myConclusion',
+          name:'MyConclusion',
+          component: MyConclusion
         }
       ]
     },
@@ -226,6 +272,26 @@ const  router = new Router({
           path: '/teacher/probation/studentManage',
           name: 'StudentManage',
           component: StudentManage
+        },
+        {
+          path: '/teacher/probation/directionRecord',
+          name: 'DirectionRecord',
+          component: DirectionRecord
+        },
+        {
+          path: '/teacher/probation/record',
+          name: 'Record',
+          component:Record
+        },
+        {
+          path: '/teacher/probation/instruction',
+          name: 'Instruction',
+          component:Instruction
+        },
+        {
+          path: '/teacher/probation/resource',
+          name: 'Resource',
+          component:Resource
         }
       ]
     }

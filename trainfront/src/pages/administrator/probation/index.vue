@@ -17,21 +17,8 @@
         </el-submenu>
         <el-submenu index="5">
           <template slot="title">见习资源管理</template>
-          <el-submenu index="5-1">
-            <template slot="title">实践工作记录</template>
-            <el-menu-item index="5-1-1">教学观摩</el-menu-item>
-            <el-menu-item index="5-1-2">班级管理</el-menu-item>
-            <el-menu-item index="5-1-3">教研活动</el-menu-item>
-            <el-menu-item index="5-1-4">试讲与授课</el-menu-item>
-            <el-menu-item index="5-1-5">试讲听课</el-menu-item>
-          </el-submenu>
-          <el-submenu index="5-2">
-            <template slot="title">教师指导记录</template>
-            <el-menu-item index="5-2-1">教学观摩记录</el-menu-item>
-            <el-menu-item index="5-2-2">班级管理指导</el-menu-item>
-            <el-menu-item index="5-2-3">教研活动指导</el-menu-item>
-            <el-menu-item index="5-2-4">试讲指导</el-menu-item>
-          </el-submenu>
+          <el-menu-item index="studentFile">见习实践记录</el-menu-item>
+          <el-menu-item index="teacherFile">教师指导记录</el-menu-item>
         </el-submenu>
         <el-submenu index="6">
           <template slot="title">见习反馈</template>

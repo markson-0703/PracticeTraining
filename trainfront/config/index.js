@@ -18,6 +18,14 @@ module.exports = {
       //     '^/api': ''//后面可以使重写的新路径，一般不做更改
       //   }
       // },
+      //设置代理
+      '/zip': {
+        target: 'http://127.0.0.1/',  //目标接口域名
+        pathRewrite: {
+          '^/zip': ''   //重写接口
+        },
+        changeOrigin: true,  //是否跨域
+      },
       '/yii': {
         changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
         target: 'http://127.0.0.1/PracticeTraining/trainback/backend/web/index.php',// 接口的域名

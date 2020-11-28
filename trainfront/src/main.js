@@ -48,6 +48,7 @@ axios.interceptors.request.use(
 Vue.prototype.$http = axios
 //
 router.beforeEach((to,from,next)=>{
+  window.scrollTo(0,0);
   let stoken = store.getters.getsToken
   let user=store.getters.getsName
   console.log(stoken)
@@ -62,6 +63,9 @@ router.beforeEach((to,from,next)=>{
      return next()
     }
 })
+router.afterEach((to,from,next) => {
+  window.scrollTo(0,0);
+});
 Vue.use(VueResource)
 Vue.use(Vuerouter)
 // Vue.use(VueAxios,axios)//注册

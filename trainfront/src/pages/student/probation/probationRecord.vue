@@ -167,6 +167,12 @@
                   this.$router.push('/student/probation/probationRecord1')
                 }else if(this.activeName=="third"){
                   this.$router.push('/student/probation/probationRecord2')
+                }else if(this.activeName=="fourth"){
+                    this.$router.push('/student/probation/probationRecord3')
+                }else if(this.activeName=="fifth"){
+                    this.$router.push('/student/probation/probationRecord4')
+                }else if(this.activeName=="sixth"){
+                    this.$router.push('/student/probation/probationRecord5')
                 }
             },
             onEditorBlur(){//失去焦点事件
@@ -223,12 +229,9 @@
                     }else if(that.recordForm1.classform=="4"){
                         that.recordForm1.classform="活动课"
                     }
-                    that.recordForm1.content1= that.recordForm1.content1.replace("<p>", "")
-                    that.recordForm1.content2= that.recordForm1.content2.replace("<p>", "")
-                    that.recordForm1.content3= that.recordForm1.content3.replace("<p>", "")
-                    that.recordForm1.content1= that.recordForm1.content1.replace("</p>", "")
-                    that.recordForm1.content2= that.recordForm1.content2.replace("</p>", "")
-                    that.recordForm1.content3= that.recordForm1.content3.replace("</p>", "")
+                    that.recordForm1.content1= that.recordForm1.content1.replace(/<[^>]+>/g, "")
+                    that.recordForm1.content2= that.recordForm1.content2.replace(/<[^>]+>/g, "")
+                    that.recordForm1.content3= that.recordForm1.content3.replace(/<[^>]+>/g, "")
                     that.$http.post('/yii/record/record/submitrecord',{
                         username:that.username,
                         type:that.recordForm1.type,
@@ -309,6 +312,7 @@
         },
         mounted() {
             //在生命周期函数中调用，实现了鼠标悬停按钮完成tooltip提示
+
             addQuillTitle();
         }
     }

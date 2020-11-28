@@ -7,7 +7,9 @@ use yii\web\Request;
 use yii\data\Pagination;
 use yii\db\Query;
 use common\models\ProbationRecord1;
+use common\models\ProbationRecord5;
 use common\models\RecordFiles;
+use common\models\Templates;
 use common\models\ProbationFiles;
 use common\models\ProbationVideos;
 use TCPDF;
@@ -38,7 +40,9 @@ class RecordController extends Controller{
 		$query=(new Query())
 		      ->select('*')
 		      ->from ('probation_record1')
-		      ->andWhere(['username'=>$username]&&['weekday'=>$weekday]&&['className'=>$className])
+		      ->andWhere(['username'=>$username])
+              ->andWhere(['weekday'=>$weekday])
+              ->andWhere(['className'=>$className])
 		      ->one();
 		if($query==null){
 			//插入数据
@@ -151,6 +155,7 @@ class RecordController extends Controller{
           ->select('*')
           ->from('record_files')
           ->andWhere(['filename'=>$t])
+          ->andWhere(['username'=>$username])
           ->one();
     if($query==null){
         //插入
@@ -175,7 +180,6 @@ class RecordController extends Controller{
         }else{
             return array("data"=>$t,"msg"=>"failure");
         }
-
     }else{
         return array("data"=>$t,"msg"=>"已存在");
     }
@@ -304,7 +308,186 @@ class RecordController extends Controller{
     }else{
         return array('data'=>[],"msg"=>"文件已存在");
     }
+   }
+
+   public function actionMytemplate(){
+    //见习教学设计模板下载1
+     $request = \Yii::$app->request;
+     $kind=$request->post('kind');
+     $query=(new Query())
+           ->select('*')
+           ->from('templates')
+           ->andWhere(['type'=>1])
+           ->andWhere(['kind'=>$kind])
+           ->andWhere(['status'=>1])
+           ->one();
+     if($query){
+        $url=explode(':',$query['path']);
+        $dir=explode('/',$url[1]);
+        $arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        $final =implode('/',$arr);
+        return array("data"=>$final,"msg"=>"success");
+    }else{
+        return false;
+    }
+   }
+
+   public function actionMytemplate1(){
+    //见习总结模板下载2
+     $request = \Yii::$app->request;
+     $kind=$request->post('kind');
+     $query=(new Query())
+           ->select('*')
+           ->from('templates')
+           ->andWhere(['type'=>1])
+           ->andWhere(['kind'=>$kind])
+           ->andWhere(['status'=>1])
+           ->one();
+     if($query){
+        $url=explode(':',$query['path']);
+        $dir=explode('/',$url[1]);
+        $arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        $final =implode('/',$arr);
+        return array("data"=>$final,"msg"=>"success");
+    }else{
+        return false;
+    }
     
    }
+
+   public function actionInstruction(){
+    //见习教学设计文件上传
+     $request = \Yii::$app->request;
+     $username=$request->post('username');
+     $menu=str_replace('\\','/',Yii::$app->basePath);
+     $dir=$menu.'/uploads/';
+     $submitTime=date('YmdHis');//提交时间
+     $filename = $_FILES['file']['name'];//文件名
+    $suffix=explode('.',$filename);
+    $size = $_FILES['file']['size'];//文件大小
+    $type = $_FILES['file']['type'];//文件类型
+    $tmp_name = $_FILES['file']['tmp_name'];//文件临时存放的位置
+    //构建新的路径
+    $path=$menu.'/uploads/'.$submitTime.'.'.$suffix[1];
+    move_uploaded_file($_FILES['file']['tmp_name'],$path);
+      //将数据存入到数据库
+    $query=(new Query())
+          ->select('*')
+          ->from('probation_files')
+          ->andWhere(['filename'=>$filename])
+          ->andWhere(['username'=>$username])
+          ->one();
+    if($query==null){
+        //插入
+        $id=(new Query())
+           ->select('*')
+           ->from('probation_files')
+           ->max('fId');
+        $currId=$id+1;
+        $result=\Yii::$app->db->createCommand()->insert('probation_files',
+            [
+            'fId'=>$currId,
+            'type'=>1,
+            'username'=>$username,
+            'filename'=>$filename,
+            'path'=>$path,
+            'submitTime'=>$submitTime,
+            'status'=>1
+            ])->execute();
+     if($result){
+            return array('data'=>$result,"msg"=>"success");
+        }else{
+            return array('data'=>[],"msg"=>"failure");
+        }
+    }else{
+        return array('data'=>[],"msg"=>"文件已存在");
+    }
+   }
+
+   public function actionGetrecorddata(){
+     $request = \Yii::$app->request;
+     $username=$request->post('username');
+     $type=$request->post('type');
+     $query=(new Query())
+           ->select('*')
+           ->from('record_files')
+           ->andWhere(['username'=>$username])
+           ->andWhere(['type'=>$type])
+           ->andWhere(['status'=>1])
+           ->all();
+    if($query){
+        return array('data'=>$query,"msg"=>"success");
+    }else{
+        return array('data'=>[],"msg"=>"failure");
+    }
+   }
+
+   public function actionGetreview(){
+    //获得见习教学设计部分的导师审阅意见
+    $request = \Yii::$app->request;
+    $username=$request->post('username');
+    $submitTime=$request->post('submitTime');
+    $query=(new Query())
+          ->select('*')
+          ->from('probation_record5')
+          ->andWhere(['username'=>$username])
+          ->andWhere(['submitTime'=>$submitTime])
+          ->andWhere(['status'=>2])
+          ->one();
+     if($query){
+        return array('data'=>$query,"msg"=>"success");
+    }else{
+        return array('data'=>[],"msg"=>"failure");
+    }
+   }
+
+   public function actionConclusion(){
+    //见习总结文件上传
+     $request = \Yii::$app->request;
+     $username=$request->post('username');
+     $menu=str_replace('\\','/',Yii::$app->basePath);
+     $dir=$menu.'/uploads/';
+     $submitTime=date('YmdHis');//提交时间
+     $filename = $_FILES['file']['name'];//文件名
+     $size = $_FILES['file']['size'];//文件大小
+     $type = $_FILES['file']['type'];//文件类型
+     $tmp_name = $_FILES['file']['tmp_name'];//文件临时存放的位置
+      //构建新的路径
+     $path=$menu.'/uploads/'.$filename;
+     move_uploaded_file($_FILES['file']['tmp_name'],$path);
+      //将数据存入到数据库
+     $query=(new Query())
+          ->select('*')
+          ->from('probation_files')
+          ->andWhere(['filename'=>$filename])
+          ->andWhere(['username'=>$username])
+          ->one();
+    if($query==null){
+        //插入
+         $id=(new Query())
+           ->select('*')
+           ->from('probation_files')
+           ->max('fId');
+        $currId=$id+1;
+        $result=\Yii::$app->db->createCommand()->insert('probation_files',
+            [
+            'fId'=>$currId,
+            'type'=>1,
+            'username'=>$username,
+            'filename'=>$filename,
+            'path'=>$path,
+            'submitTime'=>$submitTime,
+            'status'=>2//表示提交的是总结
+            ])->execute();
+        if($result){
+            return array('data'=>$submitTime,"msg"=>"success");
+        }else{
+            return array('data'=>[],"msg"=>"failure");
+        } 
+    }else{
+        return array('data'=>[],"msg"=>"重复提交了");
+    }
+   }
+
 
 }

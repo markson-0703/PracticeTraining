@@ -4,13 +4,18 @@
         <el-menu :unique-opened="true" :default-active="$route.path" @select="handleSelect" class="head" mode="horizontal">
           <el-menu-item index="1" @click="backHome">首页</el-menu-item>
           <el-menu-item index="studentManage">学生信息管理</el-menu-item>
-          <el-menu-item index="3">见习工作指导记录</el-menu-item>
+          <el-menu-item index="directionRecord">见习工作指导记录</el-menu-item>
           <el-submenu index="4">
-            <template slot="title">见习总结与反馈</template>
-            <el-menu-item index="4-1">教育见习总结</el-menu-item>
-            <el-menu-item index="4-2">教育见习反馈</el-menu-item>
+            <template slot="title">见习资源查看</template>
+            <el-menu-item index="record">学生见习记录</el-menu-item>
+            <el-menu-item index="resource">学生见习资源</el-menu-item>
           </el-submenu>
-          <el-menu-item index="5">见习成绩鉴定</el-menu-item>
+          <el-submenu index="5">
+            <template slot="title">见习总结与反馈</template>
+            <el-menu-item index="5-1">教育见习总结</el-menu-item>
+            <el-menu-item index="5-2">教育见习反馈</el-menu-item>
+          </el-submenu>
+          <el-menu-item index="6">见习成绩鉴定</el-menu-item>
           <el-menu-item index="my">个人中心</el-menu-item>
           <el-menu-item  @click="logout()">退出登录</el-menu-item>
         </el-menu>
