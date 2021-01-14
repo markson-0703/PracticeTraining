@@ -90,7 +90,6 @@
                 console.log(command)
                 this.kind=parseInt(command)
             },
-
             showRecord(id){
                 //查看当前记录
                 let that = this
@@ -219,7 +218,6 @@
     position:sticky;
     width:30px;
   }
-
   td{
     border: solid 1px #ccc;
     padding: 5px;

@@ -20,6 +20,9 @@ use Yii;
  * @property string|null $phone
  * @property string|null $email
  * @property int|null $status
+ * @property int|null $probation 见习
+ * @property int|null $practice 实习
+ * @property int|null $microteaching 微格教学
  */
 class StudentInfo extends \yii\db\ActiveRecord
 {
@@ -38,7 +41,7 @@ class StudentInfo extends \yii\db\ActiveRecord
     {
         return [
             [['sId'], 'required'],
-            [['sId', 'cId', 'majorId', 'status'], 'integer'],
+            [['sId', 'cId', 'majorId', 'status', 'probation', 'practice', 'microteaching'], 'integer'],
             [['username', 'bornDate'], 'string', 'max' => 255],
             [['sName', 'sno', 'className', 'majorName', 'phone', 'email'], 'string', 'max' => 50],
             [['sex'], 'string', 'max' => 5],
@@ -65,6 +68,9 @@ class StudentInfo extends \yii\db\ActiveRecord
             'phone' => 'Phone',
             'email' => 'Email',
             'status' => 'Status',
+            'probation' => 'Probation',
+            'practice' => 'Practice',
+            'microteaching' => 'Microteaching',
         ];
     }
 }

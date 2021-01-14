@@ -8,6 +8,7 @@ use yii\data\Pagination;
 use yii\db\Query;
 use common\models\TeacherInfo;
 use common\models\TeacherFiles;
+use common\models\RecordFiles;
 use common\models\ArrangeInfo;
 use common\models\ProbationFiles;
 use common\models\ProbationVideos;
@@ -179,6 +180,114 @@ class DocumentionController extends Controller{
          }else{
          	return false;
          }
+	}
+
+	public function actionBardata(){
+		$query=(new Query())
+		      ->select('*')
+		      ->from('teacher_info')
+		      ->andWhere(['status'=>1])
+		      ->all();
+		if($query){
+			$data=[];
+			for($i=0;$i<count($query);$i++){
+				$username=$query[$i]['username'];
+				$name=$query[$i]['tName'];
+				$file=(new Query())
+				     ->select('*')
+				     ->from('teacher_files')
+				     ->andWhere(['username'=>$username])
+				     ->andWhere(['type'=>1])
+				     ->andWhere(['status'=>1] OR ['status'=>2])
+				     ->all();
+				$number=count($file);
+				//写入数组中
+				$data[$i]['username']=$query[$i]['username'];
+				$data[$i]['tName']=$query[$i]['tName'];
+				$data[$i]['num']=$number;
+			}
+         return array("data"=>$data,"msg"=>"success");
+		}else{
+			return false;
+		}
+	}
+
+	public function actionSturecorddetail(){
+		//各个学生的记录详情
+		$request = \Yii::$app->request;
+        $username=$request->post('username');
+        $query=(new Query())
+              ->select('*')
+              ->from('record_files')
+              ->andWhere(['username'=>$username])
+              ->andWhere(['type'=>1])
+              ->andWhere(['status'=>1])
+              ->all();
+        if($query){
+        	$path=[];
+        	for($i=0;$i<count($query);$i++){
+        		$url=explode(':',$query[$i]['filedir']);
+        		$dir=explode('/',$url[1]);
+        		$arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        		$final=implode('/',$arr);
+        		$path[$i]['url']=$final;
+        	}
+        	return array("data"=>[$query,$path],"msg"=>"success");
+        }else{
+        	return array("data"=>[],"msg"=>"failure");
+        }
+	}
+
+	public function actionStufiledetail(){
+		//各个学生的文档详情
+		$request = \Yii::$app->request;
+        $username=$request->post('username');
+        $query=(new Query())
+              ->select('*')
+              ->from('probation_files')
+              ->andWhere(['username'=>$username])
+              ->andWhere(['type'=>1])
+              ->andWhere(['status'=>1] OR ['status'=>2])
+              ->all();
+        if($query){
+        	$path=[];
+        	for($i=0;$i<count($query);$i++){
+        		$url=explode(':',$query[$i]['path']);
+        		$dir=explode('/',$url[1]);
+        		$arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        		$final=implode('/',$arr);
+        		$path[$i]['url']=$final;
+        	}
+        	return array("data"=>[$query,$path],"msg"=>"success");
+        }else{
+        	return array("data"=>[],"msg"=>"failure");
+        }      
+	}
+
+	public function actionStuvideodetail(){
+		//各个学生的视频详情
+		$request = \Yii::$app->request;
+        $username=$request->post('username');
+        $query=(new Query())
+              ->select('*')
+              ->from('probation_videos')
+              ->andWhere(['username'=>$username])
+              ->andWhere(['type'=>1])
+              ->andWhere(['status'=>1])
+              ->all();
+        if($query){
+            $path=[];
+        	for($i=0;$i<count($query);$i++){
+        		$url=explode(':',$query[$i]['path']);
+        		$dir=explode('/',$url[1]);
+        		$arr=array($dir[3],$dir[4],$dir[5],$dir[6],$dir[7]);
+        		$final=implode('/',$arr);
+        		$path[$i]['url']=$final;
+        	}
+        	return array("data"=>[$query,$path],"msg"=>"success");
+        }else{
+        	return array("data"=>[],"msg"=>"failure");
+        } 
 	}
 
 }

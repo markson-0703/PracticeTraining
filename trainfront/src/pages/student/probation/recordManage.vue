@@ -49,9 +49,8 @@
     </el-dialog>
   </div>
   <el-dialog title="指导教师审阅意见" :visible.sync="dialogFormVisible">
-    <el-form-item label="意见" style="width:120px">
-      <el-input style="width: 350px;" v-model="review" auto-complete="off"></el-input>
-    </el-form-item>
+    <el-input type="textarea" :autosize="{ minRows: 2, maxRows: 4}" v-model="review">
+    </el-input>
     <span slot="footer" class="dialog-footer">
     <el-button @click="dialogFormVisible = false">取 消</el-button>
     <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
@@ -132,7 +131,7 @@
                 let that = this
                 that.$http.post('/yii/record/record/getreview',{
                     submitTime:time,
-                    username:username
+                    username:this.username
                 }).then(function(res){
                     console.log(res.data)
                     that.dialogFormVisible=true

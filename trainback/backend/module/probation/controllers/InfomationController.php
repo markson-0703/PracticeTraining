@@ -58,6 +58,23 @@ class InfomationController extends Controller{
 		}
 	}
 
+	public function actionGettutdetail(){
+		//获取校外教师的个人信息
+		$request = \Yii::$app->request;
+		$username=$request ->post('username');
+		$data=(new Query())
+		     ->select('*')
+		     ->from('tutor_info')
+		     ->andWhere(['username'=>$username])
+		     ->andWhere(['status'=>1])
+		     ->one();
+	   if($data){
+			return array("data"=>$data,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"failure");
+		}
+	}
+
 	public function actionGetproarr(){
 		//获取见习分配的信息
 		$request = \Yii::$app->request;
@@ -428,6 +445,33 @@ class InfomationController extends Controller{
       }else{
         return false;
       }
+	}
+
+	public function actionGetstulist(){
+		//校外导师获取学生的基本情况
+		$request = \Yii::$app->request;
+		$username=$request->post('username');
+		//先获取校外导师工号
+		$query=(new Query())
+		      ->select('*')
+		      ->from('tutor_info')
+		      ->andWhere(['username'=>$username])
+		      ->andWhere(['status'=>1])
+		      ->one();
+		$jno=$query['job_num'];
+		$result=(new Query())
+		       ->select('*')
+		       ->from('arrange_info')
+		       ->andWhere(['jno'=>$jno])
+		       ->andWhere(['ischecked'=>1])
+		       ->andWhere(['type'=>1])
+		       ->andWhere(['status'=>1])
+		       ->all();
+		if($result){
+			return array("data"=>$result,"msg"=>"success");
+		}else{
+			return array("data"=>[],"msg"=>"failure");
+		}
 	}
 
 

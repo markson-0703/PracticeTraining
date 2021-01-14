@@ -84,7 +84,7 @@
             <el-button type="primary" @click="saveLocal" size="small" style="background-color:#839206;margin-right:50px">保存</el-button>
             <el-button type="primary" @click="recordSubmit" size="small" style="background-color:goldenrod;margin-right:50px">提交</el-button>
             <el-button type="primary" @click="reset" size="small" style="background-color:darkcyan">重置</el-button>
-            <el-button type="primary" @click="test" size="small" style="background-color:darkcyan">测试</el-button>
+<!--            <el-button type="primary" @click="test" size="small" style="background-color:darkcyan">测试</el-button>-->
           </div>
         </div>
       </el-tab-pane>
@@ -312,7 +312,6 @@
         },
         mounted() {
             //在生命周期函数中调用，实现了鼠标悬停按钮完成tooltip提示
-
             addQuillTitle();
         }
     }

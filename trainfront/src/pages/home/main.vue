@@ -81,6 +81,12 @@
                         name: 'ProbationIndex1',
                         params: {username: this.name, password: this.pwd}
                     })
+                }else if(this.role==4){
+                    this.$router.push({
+                        path: '/tutor/probation/index',
+                        name: 'ProbationIndex3',
+                        params: {username: this.name, password: this.pwd}
+                    })
                 }
             }
         },

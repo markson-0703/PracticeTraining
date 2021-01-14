@@ -98,7 +98,8 @@ class RecordController extends Controller{
     $pdf->SetTitle($time); //设置文件的title
     $pdf->SetSubject('student_records'); //设置主题
     $pdf->SetKeywords('student,probation,record'); //设置关键词
-    $pdf->SetHeaderData(0, PDF_HEADER_LOGO_WIDTH, '见习——课堂教学观摩记录', $detail['id'], array(0, 64, 255), array(0, 64, 128)); //设置头部,比如header_logo，header_title，header_string及其属性
+    $pdf->SetHeaderData(0, PDF_HEADER_LOGO_WIDTH, '见习——课堂教学观摩记录', $detail['id'], array(0, 64, 255), array(0, 64, 128)); 
+    //设置头部,比如header_logo，header_title，header_string及其属性
     $pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
     $pdf->setHeaderFont(Array("droidsansfallback", '', 12));
     $pdf->setFooterFont(Array('droidsansfallback', '', 12));

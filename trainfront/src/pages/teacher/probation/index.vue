@@ -10,13 +10,10 @@
             <el-menu-item index="record">学生见习记录</el-menu-item>
             <el-menu-item index="resource">学生见习资源</el-menu-item>
           </el-submenu>
-          <el-submenu index="5">
-            <template slot="title">见习总结与反馈</template>
-            <el-menu-item index="5-1">教育见习总结</el-menu-item>
-            <el-menu-item index="5-2">教育见习反馈</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="6">见习成绩鉴定</el-menu-item>
+          <el-menu-item index="finalAssess">见习评定</el-menu-item>
+          <el-menu-item index="setMark">见习成绩鉴定</el-menu-item>
           <el-menu-item index="my">个人中心</el-menu-item>
+          <el-menu-item index="noticeCenter">消息中心</el-menu-item>
           <el-menu-item  @click="logout()">退出登录</el-menu-item>
         </el-menu>
       </el-header>

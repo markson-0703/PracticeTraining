@@ -42,11 +42,15 @@ class ProbationController extends Controller{
 		      ->select('*')
 		      ->from('users')
 		      ->andWhere(['status' => 1])
+          ->andWhere(['probation' => 1])
+          ->andWhere(['<>','role',1])//不将管理员自身设置到管理中
 		      ->all();
 		 $query1=(new Query())
 		      ->select('*')
 		      ->from('users')
-		      ->andWhere(['status' => 1]);
+		      ->andWhere(['status' => 1])
+          ->andWhere(['probation' => 1])
+          ->andWhere(['<>','role',1]);
 		 $querycount=clone $query1;
 		 $totalCount=$querycount->count();
 		 $data=$query1->offset($pageSize*($currentpage-1))->limit($pageSize)->all();
@@ -57,20 +61,22 @@ class ProbationController extends Controller{
 	public function actionQueryuser(){
 		//查找用户信息
 		$request = \Yii::$app->request;
-		$username=$request->post('username');
+		$kind=$request->post('role');
 		$currentpage=$request ->post('page');
 		$pageSize=8;
 		$query=(new Query())
 		      ->select('*')
 		      ->from('users')
-		      ->andWhere(['username' => $username])
+		      ->andWhere(['role' => $kind])
 		      ->andWhere(['status' => 1])
+          ->andWhere(['probation' => 1])
 		      ->all();
 		 //分页
 		 $query1=(new Query())
 		      ->select('*')
 		      ->from('users')
-		      ->andWhere(['username' => $username])
+		      ->andWhere(['role' => $kind])
+          ->andWhere(['probation' => 1])
 		      ->andWhere(['status' => 1]);
 		 $countQuery=clone $query1;
 		 $totalCount=$countQuery->count();
@@ -85,14 +91,15 @@ class ProbationController extends Controller{
 		$username=$request->post('uname');
 		$role=$request->post('role');
 		if($role==2){
-			$deleteU = \Yii::$app->db->createCommand()
-                 ->delete('users','username=:uname',
-                   [':uname' => $username])->execute();
-            $result1 = \Yii::$app->db->createCommand()
-                 ->delete('teacher_info','username=:uname',
-                 	[':uname'=>$username])->execute(); 
+			$deleteU = \Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+            // $result1 = \Yii::$app->db->createCommand()
+            //      ->delete('teacher_info','username=:uname',
+            //      	[':uname'=>$username])->execute(); 
 
-            if($deleteU & $result1){
+            if($deleteU){
          	return array("data"=>[],"msg"=>"success");
 	     }
 	     else{
@@ -101,12 +108,14 @@ class ProbationController extends Controller{
 
 		}
 		else if($role==3){
-		$deleteU = \Yii::$app->db->createCommand()
-                 ->delete('users','username=:uname',
-                   [':uname' => $username])->execute();
-        $result2 = \Yii::$app->db->createCommand()
-                 ->delete('student_info','username=:uname',
-                 	[':uname'=>$username])->execute();
+		$deleteU = \Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+        $result2 = \Yii::$app->db->createCommand()->update('student_info',
+        [
+        'probation'=>0
+        ],'username=:uname',[':uname'=>$uname])->execute();
 
          if($deleteU & $result2){
          	return array("data"=>[],"msg"=>"success");
@@ -116,12 +125,14 @@ class ProbationController extends Controller{
 	     }
 	 }
 	    else if($role==4){
-        $deleteU = \Yii::$app->db->createCommand()
-                 ->delete('users','username=:uname',
-                   [':uname' => $username])->execute();
-        $result3 = \Yii::$app->db->createCommand()
-                 ->delete('tutor_info','username=:uname',
-                 	[':uname'=>$username])->execute();
+        $deleteU = \Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:uname',[':uname'=>$uname])->execute();
+        $result3 = \Yii::$app->db->createCommand()->update('tutor_info',
+        [
+        'probation'=>0
+        ],'username=:uname',[':uname'=>$uname])->execute();
          if($deleteU & $result3){
          	return array("data"=>[],"msg"=>"success");
 	     }
@@ -129,6 +140,46 @@ class ProbationController extends Controller{
 	     	return array("data"=>[],"msg"=>"failure");
 	     }
 	  }
+   }
+
+   public function actionBulkdelusers(){
+    //批量删除选中的用户
+    $request = \Yii::$app->request;
+    $member=$request->post('member');
+    for($i=0;$i<count($member);$i++){
+      $uname=$member[$i];
+      $updateU=\Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+      $role=(new Query())
+           ->select('*')
+           ->from('users')
+           ->andWhere(['username'=>$uname])
+           ->one();
+      // if($role['role']==2){
+      //   $teacher=\Yii::$app->db->createCommand()->update('teacher_info',
+      //   [
+      //   'status'=>0
+      //   ],'username=:username',[':username'=>$uname])->execute();
+      // }else
+      if($role['role']==3){
+         $student=\Yii::$app->db->createCommand()->update('student_info',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+      }else if($role['role']==4){
+         $tutor=\Yii::$app->db->createCommand()->update('tutor_info',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+      }
+    }
+    if($updateU){
+      return array("data"=>$member,"msg"=>"success");
+    }else{
+       return array("data"=>[],"msg"=>"failure");
+    }
    }
 
    public function actionGettea(){
@@ -186,11 +237,13 @@ class ProbationController extends Controller{
    	        ->select('*')
    	        ->from('tutor_info')
    	        ->andWhere(['status' => 1])
+            ->andWhere(['probation' => 1])
    	        ->all();
 
    	$query1=(new Query())
    	        ->select('*')
    	        ->from('tutor_info')
+            ->andWhere(['probation' => 1])
    	        ->andWhere(['status' => 1]);
    	$countQuery = clone $query1;
     $totalCount = $countQuery->count();
@@ -207,11 +260,14 @@ class ProbationController extends Controller{
    	$studata=(new Query())
    	        ->select('*')
    	        ->from('student_info')
+            
+            ->andWhere(['probation' => 1])
    	        ->andWhere(['status'=>1])
    	        ->all();
     $query1=(new Query())
    	        ->select('*')
    	        ->from('student_info')
+            ->andWhere(['probation' => 1])
    	        ->andWhere(['status'=>1]);
    	$countQuery = clone $query1;
     $totalCount = $countQuery->count();
@@ -256,12 +312,14 @@ class ProbationController extends Controller{
            ->from('site_arrange')
            ->andWhere(['site'=>$name])
            ->andWhere(['status'=>1])
+           ->andWhere(['typeId'=>1])
            ->all();
 
     $query1=(new Query())
            ->select('*')
            ->from('site_arrange')
            ->andWhere(['site'=>$name])
+           ->andWhere(['typeId'=>1])
            ->andWhere(['status'=>1]);
 
     $countQuery = clone $query1;
@@ -282,12 +340,14 @@ class ProbationController extends Controller{
    	       ->from('tutor_info')
    	       ->andWhere(['tName'=>$name])
    	       ->andWhere(['status'=>1])
+           ->andWhere(['probation' => 1])
    	       ->all();
 
    	$query1=(new Query())
    	       ->select('*')
    	       ->from('tutor_info')
    	       ->andWhere(['tName'=>$name])
+           ->andWhere(['probation' => 1])
    	       ->andWhere(['status'=>1]);
 
     $countQuery = clone $query1;
@@ -308,11 +368,13 @@ class ProbationController extends Controller{
    	       ->from('student_info')
    	       ->andWhere(['sName'=>$name])
    	       ->andWhere(['status'=>1])
+           ->andWhere(['probation' => 1])
    	       ->all();
    	$query1=(new Query())
    	       ->select('*')
    	       ->from('student_info')
    	       ->andWhere(['sName'=>$name])
+           ->andWhere(['probation' => 1])
    	       ->andWhere(['status'=>1]);
 
    	$countQuery = clone $query1;
@@ -520,7 +582,11 @@ class ProbationController extends Controller{
             'username'=>$username,  
             'password'=>$passwordE,
             'role'=>2,
-            'status'=>1
+            'status'=>1,
+            'probation'=>1,
+            'practice'=>1,
+            'microteaching'=>1,
+            'socials'=>1
             ))->execute();
 
    			 if($user){
@@ -589,7 +655,11 @@ class ProbationController extends Controller{
             'username'=>$username,  
             'password'=>$passwordE,
             'role'=>4,
-            'status'=>1
+            'status'=>1,
+            'probation'=>1,
+            'practice'=>1,
+            'microteaching'=>1,
+            'socials'=>1
             ))->execute();
 
    			 if($user){
@@ -666,7 +736,11 @@ class ProbationController extends Controller{
             'username'=>$username,  
             'password'=>$passwordE,
             'role'=>3,
-            'status'=>1
+            'status'=>1,
+            'probation'=>1,
+            'practice'=>1,
+            'microteaching'=>1,
+            'socials'=>1
             ))->execute();
 
    			 if($user){
@@ -690,14 +764,15 @@ class ProbationController extends Controller{
    	//删除教师用户
    	$request = \Yii::$app->request;
    	$username = $request->post('username');
-   	$del1= \Yii::$app->db->createCommand()
-   	     ->delete('teacher_info','username=:username',
-   	     	[':username'=>$username])->execute();
-   	$del2= \Yii::$app->db->createCommand()
-   	     ->delete('users','username=:username',
-   	     	[':username'=>$username])->execute();
+   	$del1= \Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+   	// $del2= \Yii::$app->db->createCommand()
+   	//      ->delete('users','username=:username',
+   	//      	[':username'=>$username])->execute();
 
-   	if($del1&$del2){
+   	if($del1){
    		return array("data"=>[],"msg"=>"success");
    	}else{
    		return array("data"=>[],"msg"=>"failure");
@@ -709,12 +784,14 @@ class ProbationController extends Controller{
    	//删除教师用户
    	$request = \Yii::$app->request;
    	$username = $request->post('username');
-   	$del1= \Yii::$app->db->createCommand()
-   	     ->delete('tutor_info','username=:username',
-   	     	[':username'=>$username])->execute();
-   	$del2= \Yii::$app->db->createCommand()
-   	     ->delete('users','username=:username',
-   	     	[':username'=>$username])->execute();
+   	$del1= \Yii::$app->db->createCommand()->update('tutor_info',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+   	$del2= \Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
 
    	if($del1&$del2){
    		return array("data"=>[],"msg"=>"success");
@@ -727,12 +804,14 @@ class ProbationController extends Controller{
    	//删除学生用户
    	$request = \Yii::$app->request;
    	$username = $request->post('username');
-   	$del1= \Yii::$app->db->createCommand()
-   	     ->delete('student_info','username=:username',
-   	     	[':username'=>$username])->execute();
-   	$del2= \Yii::$app->db->createCommand()
-   	     ->delete('users','username=:username',
-   	     	[':username'=>$username])->execute();
+   	$del1= \Yii::$app->db->createCommand()->update('student_info',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
+   	$del2=\Yii::$app->db->createCommand()->update('users',
+        [
+        'probation'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
 
    	if($del1&$del2){
    		return array("data"=>[],"msg"=>"success");
@@ -847,7 +926,11 @@ class ProbationController extends Controller{
    				 'bornDate'=>$bornDate,
    				 'phone'=>$phone,
    				 'email'=>$email,
-   				 'status'=>1
+   				 'status'=>1,
+           'probation'=>1,
+           'practice'=>1,
+           'microteaching'=>1,
+           'socials'=>1
    				])->execute();
    			if($students){
    				//如果插入学生表成功，就需要插入到用户表
@@ -863,7 +946,11 @@ class ProbationController extends Controller{
                 	'username'=>$username,
                 	'password'=>$passwordE,
                 	'role'=>3,
-                	'status'=>1
+                	'status'=>1,
+                  'probation'=>1,
+                  'practice'=>1,
+                  'microteaching'=>1,
+                  'socials'=>1
                 	])->execute();
    			}
    			else{
@@ -878,7 +965,7 @@ class ProbationController extends Controller{
    }
 
       public function actionImportexcel2(){
-   	//校内教师用户批量导入
+   	//校外教师用户批量导入
    	$request = \Yii::$app->request->post("data");
    	$request=json_decode($request,true);
    	for($i=0;$i<count((array)$request);$i++){
@@ -912,7 +999,11 @@ class ProbationController extends Controller{
    				 'contactPhone'=>$contactPhone,
    				 'email'=>$email,
    				 'rank'=>$rank,
-   				 'status'=>1
+   				 'status'=>1,
+           'probation'=>1,
+           'practice'=>1,
+           'microteaching'=>1,
+           'socials'=>1
    				])->execute();
    			if($tutors){
    				//如果插入教师表成功，就需要插入到用户表
@@ -928,7 +1019,11 @@ class ProbationController extends Controller{
                 	'username'=>$username,
                 	'password'=>$passwordE,
                 	'role'=>4,
-                	'status'=>1
+                	'status'=>1,
+                  'probation'=>1,
+                  'practice'=>1,
+                  'microteaching'=>1,
+                  'socials'=>1
                 	])->execute();
    			}
    			else{

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Register from '../pages/register'
 import Refine from '../pages/refine'
 import Forget from '../pages/forget'
@@ -16,11 +15,16 @@ import HomePage from "../pages/administrator/probation/homepage";
 import My from "../pages/administrator/probation/my";
 import My1 from "../pages/student/probation/my";
 import My2 from "../pages/teacher/probation/my";
+import My3 from "../pages/tutor/probation/my";
 import User from "../pages/administrator/probation/user"
 import Member from "../pages/administrator/probation/member";
 import SiteArrange from "../pages/administrator/probation/siteArrange";
 import TutorSelect from "../pages/student/probation/tutorSelect";
 import ProbationIndex2 from "../pages/teacher/probation/index";//校内教师见习首页
+import ProbationIndex3 from "../pages/tutor/probation/index";//校外教师见习首页
+import StudentData from "../pages/tutor/probation/studentData";
+import GuidanceRecord from "../pages/tutor/probation/guidanceRecord";
+import StudentAssess from "../pages/tutor/probation/studentAssess";
 import StudentManage from "../pages/teacher/probation/studentManage";
 import Process from "../pages/student/probation/process";
 import ActivityArrange from"../pages/administrator/probation/activityArrange";
@@ -30,15 +34,26 @@ import ProbationRecord2 from"../pages/student/probation/probationRecord2";
 import ProbationRecord3 from"../pages/student/probation/probationRecord3";
 import ProbationRecord4 from"../pages/student/probation/probationRecord4";
 import ProbationRecord5 from"../pages/student/probation/probationRecord5";
+import AssessResult from "../pages/student/probation/assessResult";
 import ResourceManage from "../pages/student/probation/resourceManage";
 import RecordManage from "../pages/student/probation/recordManage";
 import MyConclusion from "../pages/student/probation/myConclusion";
+import MarkResult from "../pages/student/probation/markResult";
 import DirectionRecord from "../pages/teacher/probation/directionRecord";
+import FinalAssess from "../pages/teacher/probation/finalAssess";
 import Record from "../pages/teacher/probation/record";
 import Resource from "../pages/teacher/probation/resource";
 import Instruction from "../pages/teacher/probation/instruction";
 import StudentFile from "../pages/administrator/probation/studentFile";
 import TeacherFile from "../pages/administrator/probation/teacherFile";
+import EvaluationResult from "../pages/administrator/probation/evaluationResult";
+import NoticeManage from "../pages/administrator/probation/noticeManage";
+import MyNotice from "../pages/student/probation/myNotice";
+import NoticeCenter from "../pages/teacher/probation/noticeCenter";
+import NoticeDetail from "../pages/tutor/probation/noticeDetail";
+import GradeScaler from "../pages/teacher/probation/gradeScaler";
+import SetMark from "../pages/teacher/probation/setMark";
+import GradeResult from "../pages/administrator/probation/gradeResult";
 
 Vue.use(Router)
 const  router = new Router({
@@ -171,6 +186,21 @@ const  router = new Router({
           path: '/administrator/probation/teacherFile',
           name: 'TeacherFile',
           component: TeacherFile
+        },
+        {
+          path: '/administrator/probation/evaluationResult',
+          name: 'EvaluationResult',
+          component: EvaluationResult
+        },
+        {
+          path: '/administrator/probation/noticeManage',
+          name: 'NoticeManage',
+          component: NoticeManage
+        },
+        {
+          path: '/administrator/probation/gradeResult',
+          name: 'GradeResult',
+          component: GradeResult
         }
       ]
     },
@@ -251,6 +281,21 @@ const  router = new Router({
           path:'/student/probation/myConclusion',
           name:'MyConclusion',
           component: MyConclusion
+        },
+        {
+          path:'/student/probation/assessResult',
+          name:'AssessResult',
+          component: AssessResult
+        },
+        {
+          path:'/student/probation/myNotice',
+          name:'MyNotice',
+          component: MyNotice
+        },
+        {
+          path:'/student/probation/markResult',
+          name:'MarkResult',
+          component: MarkResult
         }
       ]
     },
@@ -292,6 +337,62 @@ const  router = new Router({
           path: '/teacher/probation/resource',
           name: 'Resource',
           component:Resource
+        },
+        {
+          path: '/teacher/probation/finalAssess',
+          name: 'FinalAssess',
+          component:FinalAssess
+        },
+        {
+          path: '/teacher/probation/noticeCenter',
+          name: 'NoticeCenter',
+          component:NoticeCenter
+        },
+        {
+          path: '/teacher/probation/gradeScaler',
+          name: 'GradeScaler',
+          component:GradeScaler
+        },
+        {
+          path: '/teacher/probation/setMark',
+          name: 'SetMark',
+          component:SetMark
+        }
+      ]
+    },
+    {
+      //校外教师见习首页
+      path:'/tutor/probation/index',
+      name:'ProbationIndex3',
+      meta:{
+        isLogin:true,
+      },
+      component:ProbationIndex3,
+      children:[
+        {
+          path: '/tutor/probation/my',
+          name: 'My3',
+          component: My3
+        },
+        {
+          path: '/tutor/probation/studentData',
+          name: 'StudentData',
+          component: StudentData
+        },
+        {
+          path: '/tutor/probation/guidanceRecord',
+          name: 'GuidanceRecord',
+          component: GuidanceRecord
+        },
+        {
+          path: '/tutor/probation/studentAssess',
+          name: 'StudentAssess',
+          component: StudentAssess
+        },
+        {
+          path: '/tutor/probation/noticeDetail',
+          name: 'NoticeDetail',
+          component: NoticeDetail
         }
       ]
     }

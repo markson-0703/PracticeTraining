@@ -1168,7 +1168,7 @@
   }
   .meeting{
     float:left;
-    margin:14px 0 10px 0;
+    margin:14px 0 10px 0px;
     font-weight: bold;
     background-color: #00AAFF;
     border:solid 1px #00AAFF;

@@ -3,12 +3,14 @@
   <div class="display1">
     <div class="search">
     <div class="meeting">
-      <el-input v-model="inputUser" placeholder="请输入用户名" size="mini"></el-input>
+      <el-input v-model="inputRole" placeholder="请输入身份类别" size="mini"></el-input>
     </div>
     <button class="btn3 el-icon-search" v-on:click="searchUser()">搜索</button>
-    <button type="button" class="btn3" id="import-table" v-on:click="exportFile()">批量导出</button>
+    <button type="button" class="btn3 el-icon-menu" id="import-table" v-on:click="exportFile()">批量导出</button>
+    <button class="btn3 el-icon-delete" v-on:click="bulkDelete()">批量删除</button>
     <table id="userStastics">
     <tr>
+      <th>选择</th>
       <th>序号</th>
       <th>用户名</th>
       <th>身份</th>
@@ -16,6 +18,9 @@
       <th>操作</th>
     </tr>
       <tr v-for="(item,index) in userList">
+        <td>
+        <el-checkbox v-model="item.id" @change="addItem(item.id,item.username)"></el-checkbox>
+        </td>
         <td>{{(currentpage-1)*8+index+1}}</td>
         <td>{{item.username}}</td>
         <td v-if='item.role==1'>管理员</td>
@@ -55,13 +60,49 @@
         data(){
             return{
                 userList:[],
-                inputUser:'',//搜索关键词
+                inputRole:'',//搜索关键词
                 currentpage: '1',
                 totalpage: '',
                 visiblepage: 10,
+                chooseList:[],
+                checked:''
             }
         },
         methods:{
+            addItem(val,uname){
+                let that = this
+                if(val==true){
+                    that.chooseList.push(uname)
+                }
+                console.log(that.chooseList)
+            },
+            bulkDelete(){
+                //批量删除
+                this.$confirm('此操作将彻底删除这批用户, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(()=>{
+                    let that = this
+                    if(that.chooseList.length==0){
+                        alert("还未选择删除对象！")
+                    }else{
+                        that.$http.post('/yii/probation/probation/bulkdelusers',{
+                            member:that.chooseList
+                        }).then(function(res){
+                            console.log(res.data)
+                            if(res.data.message=="success"){
+                                alert('批量删除成功!')
+                                that.getuserDate()
+                            }else{
+                                alert('批量删除失败!')
+                            }
+                        })
+                    }
+                }).catch(function(err){
+                    console.log(err)
+                })
+            },
             //从后台获取用户信息
             getuserDate(){
                 let that=this
@@ -75,20 +116,31 @@
             },
             searchUser(){
                 let that =this
+                if(that.inputRole=="校内教师"){
+                    that.inputRole=2
+                }else if(that.inputRole=="学生"){
+                    that.inputRole=3
+                }else if(that.inputRole=="校外教师"){
+                    that.inputRole=4
+                }else{
+                    alert("请输入正确的搜索关键词！")
+                    return false
+                }
                 that.$http.post('/yii/probation/probation/queryuser',{
-                       username:that.inputUser,
+                       role:that.inputRole,
                        page:that.currentpage
                 }).then((res)=>{
                     console.log(res.data)
                     console.log(res)
                     that.userList=res.data.data[0]
                     that.totalpage=res.data.data[1]
+                    that.inputRole=''
                 }).catch((err)=>{
                     console.log(err)
                 })
             },
             deleteUser(uName,role){
-                this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
+                this.$confirm('此操作将从见习平台中永久删除该用户, 是否继续?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
                     type: 'warning'

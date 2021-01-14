@@ -17,6 +17,10 @@ use Yii;
  * @property string|null $rank
  * @property int|null $status
  * @property int|null $ischoosen 判断该老师是否被选择
+ * @property int|null $probation
+ * @property int|null $practice
+ * @property int|null $microteaching
+ * @property int|null $socials
  */
 class TutorInfo extends \yii\db\ActiveRecord
 {
@@ -35,7 +39,7 @@ class TutorInfo extends \yii\db\ActiveRecord
     {
         return [
             [['tId'], 'required'],
-            [['tId', 'status', 'ischoosen'], 'integer'],
+            [['tId', 'status', 'ischoosen', 'probation', 'practice', 'microteaching', 'socials'], 'integer'],
             [['username', 'school_name', 'job_num'], 'string', 'max' => 255],
             [['tName', 'contactPhone', 'email'], 'string', 'max' => 50],
             [['rank'], 'string', 'max' => 20],
@@ -58,6 +62,10 @@ class TutorInfo extends \yii\db\ActiveRecord
             'rank' => 'Rank',
             'status' => 'Status',
             'ischoosen' => 'Ischoosen',
+            'probation' => 'Probation',
+            'practice' => 'Practice',
+            'microteaching' => 'Microteaching',
+            'socials' => 'Socials',
         ];
     }
 }

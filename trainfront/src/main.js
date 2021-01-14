@@ -18,6 +18,8 @@ import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 import quillEditor from 'vue-quill-editor'//引入富文本编辑器
 Vue.use(quillEditor)
+// 引入图表库
+import echarts from 'echarts'
 // axios.defaults.baseURL ='/yii'
 import baseConfig from '../config/dev.env'
 // axios.interceptors.request.use(function (config) {
@@ -66,6 +68,7 @@ router.beforeEach((to,from,next)=>{
 router.afterEach((to,from,next) => {
   window.scrollTo(0,0);
 });
+Vue.prototype.$echarts = echarts
 Vue.use(VueResource)
 Vue.use(Vuerouter)
 // Vue.use(VueAxios,axios)//注册

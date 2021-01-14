@@ -16,9 +16,10 @@
           <el-menu-item index="recordManage">见习记录管理</el-menu-item>
           <el-menu-item index="resourceManage">教学资源管理</el-menu-item>
         </el-submenu>
-        <el-menu-item index="5">见习工作的评价</el-menu-item>
-        <el-menu-item index="6">见习反馈</el-menu-item>
+        <el-menu-item index="assessResult">见习评定</el-menu-item>
+        <el-menu-item index="markResult">见习反馈</el-menu-item>
         <el-menu-item index="my">个人中心</el-menu-item>
+        <el-menu-item index="myNotice">消息中心</el-menu-item>
         <el-menu-item index="8" @click="logout()">退出登录</el-menu-item>
       </el-menu>
     </el-header>

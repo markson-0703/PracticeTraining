@@ -22,15 +22,11 @@
         </el-submenu>
         <el-submenu index="6">
           <template slot="title">见习反馈</template>
-          <el-submenu index="6-1">
-            <template slot="title">学生的个人评价</template>
-            <el-menu-item index="6-1-1">自我评价</el-menu-item>
-            <el-menu-item index="6-1-2">小组评价</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="6-2">教师总结与评价</el-menu-item>
-          <el-menu-item index="6-3">见习成绩鉴定</el-menu-item>
+          <el-menu-item index="evaluationResult">见习评定</el-menu-item>
+          <el-menu-item index="gradeResult">见习成绩</el-menu-item>
         </el-submenu>
         <el-menu-item index="my">个人中心</el-menu-item>
+        <el-menu-item index="noticeManage">消息管理</el-menu-item>
         <el-menu-item index="8" @click="logout()">退出登录</el-menu-item>
       </el-menu>
     </el-header>

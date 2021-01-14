@@ -10,6 +10,8 @@ use common\models\TeacherInfo;
 use common\models\TeacherFiles;
 use common\models\ArrangeInfo;
 use common\models\RecordFiles;
+use common\models\ProbationFiles;
+use common\models\ProbationVideos;
 use common\models\ProbationRecord5;
 use TCPDF;
 use common\config\tcpdf_include;
@@ -324,18 +326,18 @@ class ResourceController extends Controller{
 		      ->from('teacher_info')
 		      ->andWhere(['status'=>1])
 		      ->all();
-		$query1=(new Query())
+	    $query1=(new Query())
 		      ->select('*')
 		      ->from('teacher_info')
 		      ->andWhere(['status'=>1]);
 		 $querycount=clone $query1;
 		 $totalCount=$querycount->count();
-		 $data=$query1->offset($pageSize*($currentpage-1))->limit($pageSize)->all();
+		 $result=$query1->offset($pageSize*($currentpage-1))->limit($pageSize)->all();
          $pageNum = ceil($totalCount/8);
-		if($query){
+		if($result){
 			$data=[];
-			for($i=0;$i<count($query);$i++){
-			$username=$query[$i]['username'];
+			for($i=0;$i<count($result);$i++){
+			$username=$result[$i]['username'];
 		    $record=(new Query())
 		           ->select('*')
 		           ->from('teacher_files')
@@ -344,12 +346,120 @@ class ResourceController extends Controller{
 		           ->andWhere(['status'=>1])
 		           ->all();
 		    $recordnum=count($record);
-		    $data[$i]['username']=$query[$i]['username'];
-		    $data[$i]['tName']=$query[$i]['tName'];
-		    $data[$i]['job_num']=$query[$i]['job_num'];
+		    $data[$i]['username']=$result[$i]['username'];
+		    $data[$i]['tName']=$result[$i]['tName'];
+		    $data[$i]['job_num']=$result[$i]['job_num'];
 		    $data[$i]['number']=$recordnum;
 		}
 		return array("data"=>[$data,$pageNum],"msg"=>"success");
+		}else{
+			return false;
+		}
+	}
+
+	public function actionTeafile(){
+		$request = \Yii::$app->request;
+		$name=$request ->post('name');
+		$query=(new Query())
+		      ->select('*')
+		      ->from('teacher_info')
+		      ->andWhere(['tName'=>$name])
+		      ->andWhere(['status'=>1])
+		      ->all();
+		 if($query){
+		 	$data=[];
+		 	for($j=0;$j<count($query);$j++){
+		 	$username=$query[$j]['username'];
+		 	$number=(new Query)
+		 	       ->select('*')
+		 	       ->from('teacher_files')
+		 	       ->andWhere(['username'=>$username])
+		 	       ->andWhere(['type'=>1])
+		 	       ->andWhere(['status'=>1] OR ['status'=>2])
+		 	       ->all();
+		 	$data[$j]['username']=$query[$j]['username'];       
+		 	$data[$j]['tName']=$name;
+		 	$data[$j]['job_num']=$query[$j]['job_num'];
+		 	$data[$j]['number']=count($number);
+		 }
+		 return array("data"=>$data,"msg"=>"success");
+		 }else{
+		 	return false;
+		 }
+	}
+
+	public function actionStufile(){
+		//查看某教师指导学生的所有数据
+		$request = \Yii::$app->request;
+		$name=$request ->post('name');//指导教师的姓名
+		$student=(new Query())
+		        ->select('*')
+		        ->from('arrange_info')
+		        ->andWhere(['tName'=>$name])
+		        ->andWhere(['ischecked'=>1])
+		        ->andWhere(['status'=>1])
+		        ->all();
+		if($student){
+			$jno=[];
+			for($a=0;$a<count($student);$a++){
+				//先获取有几个教师，根据工号
+			    array_push($jno,$student[$a]['job_num']);
+			 for($b=$a+1;$b<count($student);$b++){
+			 	if($student[$b]['job_num']==$student[$a]['job_num']){
+			 		$a++;
+			 	}else{
+			 		break;
+			 	}
+			 }
+			}
+			//获取各自指导学生的数据
+			$data=[];
+			for($i=0;$i<count($jno);$i++){
+				$job_num=$jno[$i];
+				$member=(new Query())
+				       ->select('*')
+				       ->from('arrange_info')
+				       ->andWhere(['job_num'=>$job_num])
+				       ->andWhere(['ischecked'=>1])
+				       ->andWhere(['status'=>1])
+				       ->all();
+				for($j=0;$j<count($member);$j++){
+				 $username=$member[$j]['username'];//学生用户名
+				//先记录数据
+				$record=(new Query())
+				       ->select('*')
+				       ->from('record_files')
+				       ->andWhere(['type'=>1])
+				       ->andWhere(['status'=>1])
+				       ->andWhere(['username'=>$username])
+				       ->all();
+				//文档数据
+				$file=(new Query())
+				     ->select('*')
+				     ->from('probation_files')
+				     ->andWhere(['type'=>1])
+				     ->andWhere(['username'=>$username])
+				     ->andWhere(['status'=>1] OR ['status'=>2])
+				     ->all();
+				//视频数据
+				$video=(new Query())
+				      ->select('*')
+				      ->from('probation_videos')
+				      ->andWhere(['type'=>1])
+				      ->andWhere(['username'=>$username])
+				      ->andWhere(['status'=>1])
+				      ->all();
+				$data[$i][$j]['sno']=$member[$j]['sno'];
+				$data[$i][$j]['sName']=$member[$j]['sName'];
+				$data[$i][$j]['username']=$member[$j]['username'];
+				$data[$i][$j]['num1']=count($record);
+				$data[$i][$j]['num2']=count($file);
+				$data[$i][$j]['num3']=count($video);
+				$data[$i][$j]['tName']=$name;
+				$data[$i][$j]['job_num']=$job_num;
+				}
+			}
+			return array("data"=>$data,"msg"=>"success");
 		}else{
 			return false;
 		}
@@ -378,6 +488,68 @@ class ResourceController extends Controller{
         }else{
         	return array("data"=>[],"msg"=>"failure");
         }
+	}
+
+	public function actionAllstufile(){
+		$request = \Yii::$app->request;
+		$currentpage=$request->post('page');
+		$pageSize=8;
+		$member=(new Query())
+		       ->select('*')
+		       ->from('arrange_info')
+		       ->andWhere(['ischecked'=>1])
+		       ->andWhere(['status'=>1])
+		       ->all();
+	    $member1=(new Query())
+		       ->select('*')
+		       ->from('arrange_info')
+		       ->andWhere(['ischecked'=>1])
+		       ->andWhere(['status'=>1]);
+		 $querycount=clone $member1;
+		 $totalCount=$querycount->count();
+		 $result=$member1->offset($pageSize*($currentpage-1))->limit($pageSize)->all();
+         $pageNum = ceil($totalCount/8);
+		if($result){
+			$data=[];
+			for($i=0;$i<count($result);$i++){
+				$username=$result[$i]['username'];//学生的用户名
+				//先记录数据
+				$record=(new Query())
+				       ->select('*')
+				       ->from('record_files')
+				       ->andWhere(['type'=>1])
+				       ->andWhere(['status'=>1])
+				       ->andWhere(['username'=>$username])
+				       ->all();
+				//文档数据
+				$file=(new Query())
+				     ->select('*')
+				     ->from('probation_files')
+				     ->andWhere(['type'=>1])
+				     ->andWhere(['username'=>$username])
+				     ->andWhere(['status'=>1] OR ['status'=>2])
+				     ->all();
+				//视频数据
+				$video=(new Query())
+				      ->select('*')
+				      ->from('probation_videos')
+				      ->andWhere(['type'=>1])
+				      ->andWhere(['username'=>$username])
+				      ->andWhere(['status'=>1])
+				      ->all();
+			  $data[$i]['username']=$username;//学生用户名
+			  $data[$i]['sno']=$result[$i]['sno'];//学号
+			  $data[$i]['sName']=$result[$i]['sName'];//学生姓名
+			  $data[$i]['tName']=$result[$i]['tName'];//教师姓名
+			  $data[$i]['job_num']=$result[$i]['job_num'];//工号
+			  $data[$i]['num1']=count($record);
+			  $data[$i]['num2']=count($file);
+			  $data[$i]['num3']=count($video);
+			}
+         return array("data"=>[$data,$pageNum],"msg"=>"success");
+		}else{
+			return false;
+		}
 	}
 
 

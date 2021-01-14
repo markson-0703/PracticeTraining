@@ -74,7 +74,7 @@
                 </tr>
               </table>
             </el-tab-pane>
-            <el-tab-pane label="教师模板">
+            <el-tab-pane label="校内教师模板">
               <el-upload class="template-upload" ref="temForm1" action="/yii/template/template/uploadtemplate1"
                          :on-preview="handlePreview1" :on-remove="handleRemove1" :file-list="temList" :auto-upload="false"
                          :on-change="handleChanged1" :before-remove="beforeRemove1" :on-success="uploadSuccess1" :on-error="uploadError1"
@@ -112,6 +112,46 @@
                   <td v-if="item.kind==4">见习教研活动指导记录</td>
                   <td v-if="item.kind==5">见习生试讲指导记录</td>
                   <td v-if="item.kind==6">指导教育见习工作总结</td>
+                  <td>{{item.filename}}</td>
+                  <td>{{item.publishTime}}</td>
+                  <td>
+                    <span style="cursor: pointer" @click="del(item.temId)"><el-button type="danger" icon="el-icon-delete" circle></el-button></span>
+                  </td>
+                </tr>
+              </table>
+            </el-tab-pane>
+            <el-tab-pane label="校外教师模板">
+              <el-upload class="template-upload" ref="temForm2" action="/yii/template/template/uploadtemplate2"
+                         :on-preview="handlePreview2" :on-remove="handleRemove2" :file-list="docuList" :auto-upload="false"
+                         :on-change="handleChanged2" :before-remove="beforeRemove2" :on-success="uploadSuccess2" :on-error="uploadError2"
+                         :data="needData" :before-upload="beforeUpload2">
+                <el-dropdown @command="handleCommand2">
+            <span class="el-dropdown-link">
+            模板类型<i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command="1">测试模板1</el-dropdown-item>
+                    <el-dropdown-item command="2">测试模板2</el-dropdown-item>
+                    <el-dropdown-item command="3">测试模板3</el-dropdown-item>
+                  </el-dropdown-menu>
+                </el-dropdown>
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success" @click="upload2">上传</el-button>
+                <div slot="tip" class="el-upload__tip">仅支持word文档的上传</div>
+              </el-upload>
+              <table id="templateStastics2">
+                <tr>
+                  <th style="width:3%">Id</th>
+                  <th style="width:7%">模板类型</th>
+                  <th style="width:7%">文件名称</th>
+                  <th style="width:5%">发布时间</th>
+                  <th style="width:3%">操作</th>
+                </tr>
+                <tr v-for="item in tutorTem">
+                  <td>{{item.temId}}</td>
+                  <td v-if="item.kind==1">测试模板1</td>
+                  <td v-if="item.kind==2">测试模板2</td>
+                  <td v-if="item.kind==3">测试模板3</td>
                   <td>{{item.filename}}</td>
                   <td>{{item.publishTime}}</td>
                   <td>
@@ -161,15 +201,18 @@
                 },
                 kind:0,//见习部分学生模板的类型
                 form:0,//见习部分教师模板的类型
+                race:0,//校外教师模板的类型
                 uploadData:{
                 },
                 myData:{
-
                 },
+                needData:{},
                 templateData:[],
                 teacherTem:[],//教师模板数据
+                tutorTem:[],
                 fileList:[],
                 temList:[],
+                docuList:[],
              rules: {
                     pass: [
                         { validator: validatePass, trigger: 'blur' }
@@ -202,15 +245,29 @@
                     that.teacherTem=res.data.data
                 })
             },
+            gettutorTem(){
+                let that = this
+                that.$http.post('/yii/template/template/tuttemplate',{
+                    username:that.myForm.username
+                }).then(function(res){
+                    console.log(res.data)
+                    that.tutorTem=res.data.data
+                })
+            },
             handleCommand(command) {
                 //学生
                 console.log(command)
                 this.kind=parseInt(command)
             },
             handleCommand1(command) {
-                //教师
+                //校内教师
                 console.log(command)
                 this.form=parseInt(command)
+            },
+            handleCommand2(command) {
+                //校外教师
+                console.log(command)
+                this.race=parseInt(command)
             },
             load(){
                 let data = {
@@ -235,7 +292,6 @@
                             alert("操作有误")
                         }
                     })
-
             },
             handleClick(tab,event){
                 console.log(tab,event)
@@ -258,10 +314,17 @@
                 //点击文件列表中已上传的文件时的钩子
                 console.log(file);//打印出了文件信息
             },
+            handlePreview2(file){
+                //点击文件列表中已上传的文件时的钩子
+                console.log(file);//打印出了文件信息
+            },
             beforeRemove(file) {
                 return this.$confirm(`确定移除 ${ file.name }？`);
             },
             beforeRemove1(file) {
+                return this.$confirm(`确定移除 ${ file.name }？`);
+            },
+            beforeRemove2(file) {
                 return this.$confirm(`确定移除 ${ file.name }？`);
             },
             handleRemove(file){
@@ -269,6 +332,10 @@
                 console.log(file);
             },
             handleRemove1(file){
+                //文件列表移除文件时的钩子
+                console.log(file);
+            },
+            handleRemove2(file){
                 //文件列表移除文件时的钩子
                 console.log(file);
             },
@@ -280,12 +347,20 @@
                 //文件状态改变时的钩子，添加文件、上传成功和上传失败时都会被调用
                 console.log(file)
             },
+            handleChanged2(file){
+                //文件状态改变时的钩子，添加文件、上传成功和上传失败时都会被调用
+                console.log(file)
+            },
             uploadError(){
                 this.$refs.temForm.clearFiles();
                 this.$message.error('上传失败，请重新上传!');
             },
             uploadError1(){
                 this.$refs.temForm1.clearFiles();
+                this.$message.error('上传失败，请重新上传!');
+            },
+            uploadError2(){
+                this.$refs.temForm2.clearFiles();
                 this.$message.error('上传失败，请重新上传!');
             },
             upload(){
@@ -302,6 +377,14 @@
                     this.$message.error('请务必选择模板类型之后再上传!');
                 }else{
                     this.$refs.temForm1.submit()
+                }
+            },
+            upload2(){
+                //教师模板上传
+                if(this.race==0){
+                    this.$message.error('请务必选择模板类型之后再上传!');
+                }else{
+                    this.$refs.temForm2.submit()
                 }
             },
             uploadSuccess(res){
@@ -326,6 +409,22 @@
                         type: 'success'
                     });
                     this.getteacherTem()
+                    console.log(res.data)
+                }else{
+                    this.$message({
+                        message: res.message,
+                        type: 'warning'
+                    });
+                }
+            },
+            uploadSuccess2(res){
+                //校外
+                if(res.code==200){
+                    this.$message({
+                        message: '模板上传成功!',
+                        type: 'success'
+                    });
+                    this.gettutorTem()
                     console.log(res.data)
                 }else{
                     this.$message({
@@ -362,6 +461,20 @@
                 });
                 return promise;
             },
+            beforeUpload2(file){
+                //在上传文件之前，先上传需要的变量
+                this.needData = {
+                    username:this.$store.getters.getsName,
+                    kind:this.race
+                }
+                console.log(this.needData)
+                let promise = new Promise((resolve) => {
+                    this.$nextTick(function () {
+                        resolve(true);
+                    });
+                });
+                return promise;
+            },
             del(id){
                 //删除
                 this.$confirm('此操作将永久删除该模板, 是否继续?', '提示', {
@@ -377,6 +490,7 @@
                         if(res.data.message=="success"){
                             that.getTemplate()
                             that.getteacherTem()
+                            that.getteacherTem()
                             alert('删除成功!')
                         }else{
                             alert('操作失败!')
@@ -386,10 +500,10 @@
             }
         },
         created() {
-            console.log(this.$store.getters.getsName)
             this.myForm.username=this.$store.getters.getsName
             this.getTemplate()
             this.getteacherTem()
+            this.gettutorTem()
         }
     }
 </script>

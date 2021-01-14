@@ -5,14 +5,15 @@
         <el-input v-model="inputTea" placeholder="请输入教师姓名" size="mini"></el-input>
       </div>
       <button class="btn3" v-on:click="teaRecord()">搜索</button>
+      <button class="btn3" v-on:click="teacherRecord()">显示数据</button>
     </div>
     <table id="teafileStastics">
       <tr>
-        <td>序号</td>
-        <td>教师姓名</td>
-        <td>工号</td>
-        <td>文件数据</td>
-        <td>详情</td>
+        <th>序号</th>
+        <th>教师姓名</th>
+        <th>工号</th>
+        <th>文件数据</th>
+        <th>详情</th>
       </tr>
       <tr v-for="(item,index) in teafileData">
         <td>{{index+1}}</td>
@@ -69,8 +70,18 @@
       <span slot="footer" class="dialog-footer">
            <el-button @click="dialogVisible= false">取 消</el-button>
            <el-button type="primary" @click="dialogVisible= false">确 定</el-button>
-           </span>
+      </span>
     </el-dialog>
+<!--    显示统计分析的结果-->
+    <el-dialog title="统计分析详情" :visible.sync="stasticsVisible" :before-close="handleClose" width="800px">
+      <BarChart :data="sdata" :title="stitle"></BarChart>
+      <span slot="footer" class="dialog-footer">
+           <el-button @click="stasticsVisible= false">取 消</el-button>
+           <el-button type="primary" @click="stasticsVisible= false">确 定</el-button>
+      </span>
+    </el-dialog>
+<!--    进行结果统计-->
+    <el-button type="primary" round style="float:left" @click="showAnalyse">数据统计</el-button>
   </div>
 </template>
 
@@ -78,6 +89,7 @@
     import axios from 'axios'
     import JSZip from 'jszip'
     import FileSaver from 'file-saver'
+    import BarChart from '../../../components/BarChart'
     export const getFile =(url) =>{
         return new Promise((resolve, reject) => {
             axios({
@@ -93,6 +105,7 @@
     }
     export default {
         name: "teacherFile",
+        components: {BarChart},
         data(){
             return{
                 currentpage: 1, // 当前页
@@ -102,8 +115,12 @@
                 tName:'',//教师姓名
                 inputTea:'',//教师姓名
                 dialogVisible:false,
+                stasticsVisible:false,//统计结果的可视性
                 filesDetail:[],
-                recordUrl:[]
+                recordUrl:[],
+                sdata:[],//统计数据
+                stitle:'教师见习指导记录统计',
+                barList:[]
             }
         },
         methods:{
@@ -114,8 +131,41 @@
                     })
                     .catch(_ => {});
             },
+            getBardata(){
+                //获取统计分析数据
+                let that = this
+                that.$http.post('/yii/resource/documention/bardata',{
+                }).then(function(res){
+                    console.log(res.data)
+                    that.barList=res.data.data
+                    for(let i =0;i<that.barList.length;i++){
+                        that.sdata.push({
+                            name:that.barList[i].tName,
+                            num:that.barList[i].num,
+                        })
+                    }
+                    console.log(that.sdata)
+                }).catch(function(err){
+                    console.log(err)
+                })
+            },
+            showAnalyse(){
+                //展现统计分析的结果
+                this.getBardata()
+                this.stasticsVisible=true
+            },
             teaRecord(){
                 //查看当前教师的记录数据
+                let that= this
+                that.$http.post('/yii/resource/resource/teafile',{
+                    name:that.inputTea
+                }).then(function(res){
+                    console.log(res.data)
+                   that.teafileData=res.data.data
+                   that.inputTea=''
+                }).catch(function(err){
+                    console.log(err)
+                })
             },
             havesee(id){
                 //查看
@@ -159,8 +209,10 @@
                     console.log(res.data)
                     that.dialogVisible=true
                     that.filesDetail=res.data.data[0]
-                    for(var i =0;i<res.data.data[1].length;i++){
-                        that.recordUrl[i]='/zip'+res.data.data[1][i].url
+                    if(res.data.data[1].length>0) {
+                        for (var i = 0; i < res.data.data[1].length; i++) {
+                            that.recordUrl[i] = '/zip' + res.data.data[1][i].url
+                        }
                     }
                     console.log(that.recordUrl)
                 })
@@ -233,6 +285,8 @@
         },
         created() {
             this.teacherRecord()
+            this.getBardata()
+            console.log(this.sdata)
         },
         computed: {
             // 计算属性：返回页码数组，这里会自动进行脏检查，不用$watch();

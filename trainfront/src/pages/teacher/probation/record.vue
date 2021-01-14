@@ -15,7 +15,7 @@
           <td>{{item.sName}}</td>
           <td>
             {{item.record}}条数据
-            <span><el-button size="small" type="primary" plain @click="recordDetail(item.username)">详情</el-button></span>
+            <span><el-button size="small" type="primary" plain @click="recordDetail(item.username,item.sName)">详情</el-button></span>
           </td>
           <td>
             {{item.design}}条数据
@@ -116,23 +116,28 @@
     var Font = Quill.import('formats/font');
     Font.whitelist = fonts; //将字体加入到白名单
     Quill.register(Font, true);
-    export const downloadFile =(url) =>{
-        //批量下载进行相关设置：chrome->设置->高级->内容设置->pdf文档
-          const iframe =document.createElement("iframe");
-          iframe.style.display="none";//防止影响页面
-          iframe.style.height=0;
-          iframe.src=url;
-          document.body.appendChild(iframe)
-        //5分钟后删除
-          setTimeout(()=>{
-            iframe.remove();
-        }, 5 * 60 * 1000);
+    import axios from 'axios'
+    import JSZip from 'jszip'
+    import FileSaver from 'file-saver'
+    export const getFile =(url) =>{
+        return new Promise((resolve, reject) => {
+            axios({
+                method:'get',
+                url,
+                responseType: 'arraybuffer'
+            }).then(data => {
+                resolve(data.data)
+            }).catch(error => {
+                reject(error.toString())
+            })
+        })
     }
     export default {
         name: "record",
         data(){
             return{
                 username:'',//该教师的用户名
+                stuname:'',//当前学生的姓名
                 infoData:[],
                 recordData:[],//记录数据
                 instructionData:[],//教学设计数据
@@ -185,9 +190,10 @@
                     }
                 })
             },
-            recordDetail(uname){
+            recordDetail(uname,name){
              //动态获取学生记录详情
                 let that = this
+                that.stuname=name
                 that.$http.post('/yii/resource/resource/recordinfo',{
                     username:uname,
                     headers:{}
@@ -195,7 +201,9 @@
                     console.log(res.data)
                     that.dialogVisible=true
                     that.recordData=res.data.data[0]
-                    that.orderAttachment=res.data.data[1]
+                    for(var b =0;b<res.data.data[1].length;b++){
+                        that.orderAttachment[b]='/zip'+res.data.data[1][b].attachment
+                    }
                     for(let a=0;a<6;a++){
                         that.type[a].num=0
                     }
@@ -260,13 +268,24 @@
             },
             bulkDownload(){
                 //批量下载
-                let that = this
-                //获取批量下载的地址
-                for (var i =0;i<that.orderAttachment.length;i++){
-                    //循环变量调用downloadFile方法
-                    const url="http://127.0.0.1/"+that.orderAttachment[i].attachment;
-                    downloadFile(url);
-                }
+                const data=this.orderAttachment
+                const zip = new JSZip()
+                const cache = {}
+                const promises = []
+                data.forEach(item => {
+                    const promise = getFile(item).then(data => { // 下载文件, 并存成ArrayBuffer对象
+                        const arr_name = item.split("/")
+                        const file_name = arr_name[arr_name.length - 1] // 获取文件名
+                        zip.file(file_name, data, { binary: true }) // 逐个添加文件
+                        cache[file_name] = data
+                    })
+                    promises.push(promise)
+                })
+                Promise.all(promises).then(() => {
+                    zip.generateAsync({type:"blob"}).then(content => { // 生成二进制流
+                        FileSaver.saveAs(content, +this.stuname+"见习文档.zip") // 利用file-saver保存文件
+                    })
+                })
             },
             handleClose(done) {
                 this.$confirm('确认关闭？')

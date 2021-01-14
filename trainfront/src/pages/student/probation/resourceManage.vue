@@ -287,8 +287,6 @@
                 }else{
                     this.$message.error('视频上传失败，请重新上传！');
                 }
-
-
             },
             beforeUploadVideo(file){
                 //上传前回调

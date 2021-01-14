@@ -49,7 +49,6 @@
           </div>
         </el-tab-pane>
       </el-tabs>
-
     </div>
 </template>
 
@@ -153,7 +152,7 @@
                     that.myDetails.rank=res.data.data.rank
                 })
             },
-            submitForm(){
+            submitForm(formName){
                 this.$refs[formName].validate((valid)=>{
                     if(valid){
                         this.load()
@@ -207,5 +206,4 @@
   .download{
    text-align: center;
   }
-
 </style>

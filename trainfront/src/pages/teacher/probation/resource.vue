@@ -38,7 +38,7 @@
                 <td>{{item.filename}}</td>
                 <td>{{item.submitTime}}</td>
                 <td>
-              <span style="display:flex">
+             <span style="display:flex">
                 <button style="border: 0px;float:left;margin-left:10px;cursor: pointer" @click="theirFile(item.fId)">查看</button>
                 <button style="border: 0px;float:left;margin-left:10px;cursor: pointer" @click="downFile(item.fId)">下载</button>
               </span>

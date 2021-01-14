@@ -35,6 +35,12 @@ return [
         ],
         'resource'=> [
             'class' => 'backend\module\resource\Module',
+        ],
+        'evaluation'=> [
+            'class' => 'backend\module\evaluation\Module',
+        ],
+        'notice'=> [
+            'class' => 'backend\module\notice\Module',
         ]
     ],
     'components' => [

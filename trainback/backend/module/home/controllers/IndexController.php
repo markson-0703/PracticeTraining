@@ -132,7 +132,7 @@ class IndexController extends Controller
             ->select('*')
             ->from('users')
             ->Where(['username'=> $username])
-            ->andWhere(['status'=> 1])
+            ->andWhere(['status'=> 1])//还在系统中
             ->one();
     	if($query!=null)
     	{
