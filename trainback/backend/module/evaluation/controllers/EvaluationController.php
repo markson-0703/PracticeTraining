@@ -21,7 +21,7 @@ class EvaluationController extends Controller{
 	}
 
 	public function actionStubaseinfo(){
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $username=$request->post('username');
         //先去找系统中已经录入的信息
         $query=(new Query())
@@ -122,7 +122,7 @@ class EvaluationController extends Controller{
 
 	public function actionCheckleader(){
 		//判断组长身份
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $username=$request->post('username');
         $query=(new Query())
               ->select('*')
@@ -141,7 +141,7 @@ class EvaluationController extends Controller{
 
 	public function actionMymember(){
 		//获取自己的组员
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $school=$request->post('school');
         $tName=$request->post('tName');
         $query=(new Query())

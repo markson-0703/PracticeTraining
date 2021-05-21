@@ -1,6 +1,6 @@
 <template>
   <div class="personal">
-    <!--      该页面属于学生的个人中心-->
+    <!--      该页面属于学生见习部分的个人中心-->
     <el-tabs v-model="activeName" @tab-click="handleClick">
     <el-tab-pane label="个人信息" name="first">
       <h1 style="font-weight:bold;font-color:black">{{this.content}}</h1>
@@ -175,7 +175,6 @@
             downloadPdf(){
                 //导出pdf
                 htmlToPdf.downloadPDF(document.querySelector('#demo'), '个人信息表')
-
             },
             handleClick(tab,event){
                 console.log(tab,event)
@@ -224,7 +223,7 @@
   }
   #demo {
     background-color: #fff;
-    width: 80%;
+    width: 90%;
     /* height: 400px; */
     padding: 60px 0px 60px 400px;
     box-sizing: border-box;
@@ -232,5 +231,4 @@
     align-items: center;
     display:inline-block;
   }
-
 </style>

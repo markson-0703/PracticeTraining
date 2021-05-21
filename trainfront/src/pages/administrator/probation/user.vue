@@ -27,8 +27,8 @@
         <td v-if='item.role==2'>校内教师</td>
         <td v-if='item.role==3'>学生</td>
         <td v-if='item.role==4'>校外教师</td>
-        <td v-if='item.status==0'>无效</td>
-        <td v-if='item.status==1'>有效</td>
+        <td v-if='item.status==0'>见习部分无效</td>
+        <td v-if='item.status==1'>见习部分有效</td>
         <td><span @click="deleteUser(item.username,item.role)" style="cursor: pointer"><i class="el-icon-delete"></i>删除</span></td>
       </tr>
   </table>
@@ -73,6 +73,8 @@
                 let that = this
                 if(val==true){
                     that.chooseList.push(uname)
+                }else if(val==false){
+                    that.chooseList.pop(uname)
                 }
                 console.log(that.chooseList)
             },
@@ -173,7 +175,6 @@
                     const data = this.formatJson(filterVal, list);
                     export_json_to_excel(tHeader, data, "用户信息表");//此处的函数名要与Export2Excel.js中的对应
                 })
-
             },
             pageChange: function (page) { // 分页
                 if (this.currentpage != page) {
@@ -274,5 +275,4 @@
     width: 20%;
     padding:2px;
   }
-
 </style>

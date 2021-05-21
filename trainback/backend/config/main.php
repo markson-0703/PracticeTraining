@@ -41,6 +41,9 @@ return [
         ],
         'notice'=> [
             'class' => 'backend\module\notice\Module',
+        ],
+        'practice'=> [
+            'class' => 'backend\module\practice\Module',
         ]
     ],
     'components' => [

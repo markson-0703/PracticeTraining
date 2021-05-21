@@ -79,14 +79,15 @@ class ArrangeController extends Controller{
 	}
 
 	public function actionQueryarr(){
-	$request = \Yii::$app->request;
+	  $request = \Yii::$app->request;
    	$name=$request->post('tName');
    	$currentpage=$request ->post('page');
-	$pageSize=8;
+	  $pageSize=8;
    	$queryT=(new Query())
    	       ->select('*')
    	       ->from('site_arrange')
    	       ->andWhere(['tName'=>$name])
+           ->andWhere(['typeId'=>1])
    	       ->andWhere(['status'=>1])
    	       ->all();
 
@@ -94,6 +95,7 @@ class ArrangeController extends Controller{
    	       ->select('*')
    	       ->from('site_arrange')
    	       ->andWhere(['tName'=>$name])
+           ->andWhere(['typeId'=>1])
    	       ->andWhere(['status'=>1]);
 
     $countQuery = clone $query1;
@@ -202,11 +204,5 @@ class ArrangeController extends Controller{
      	}else{
    		return array("data"=>[],"msg"=>"failure");
    	}
-		
 	}
-
-
-
-
-
 }

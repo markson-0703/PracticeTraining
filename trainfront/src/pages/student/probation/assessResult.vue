@@ -279,11 +279,11 @@
                 }).then(function(res){
                     console.log(res.data)
                     if(res.data.message=="success"){
-                        that.dialogVisible=true
                         that.baseAssess.selfContent=res.data.data.selfevaluation
                         that.baseAssess.groupContent=res.data.data.groupevaluation
                         that.baseAssess.tutContent=res.data.data.tutorevaluation
                         that.baseAssess.teaContent=res.data.data.teacherevaluation
+                        that.dialogVisible=true
                     }else{
                         this.$notify.error({
                             title: '错误',
@@ -351,7 +351,6 @@
                     that.assessForm.tutorevaluation=res.data.data[1].tutorevaluation
                     that.assessForm.teacherevaluation=res.data.data[1].teacherevaluation
                     that.getMember()
-                    console.log(that.assessForm.school)
                     if(res.data.data[1].status>1){
                         that.haveAssess=true
                         }

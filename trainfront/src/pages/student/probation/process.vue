@@ -220,7 +220,6 @@
                     that.timeForm.startTime=res.data.data.startTime
                     that.timeForm.endTime=res.data.data.endTime
                 })
-
             },
             getpersonInfo(){
                 //根据学生用户名获取个人信息

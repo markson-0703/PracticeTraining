@@ -23,7 +23,7 @@ class ResourceController extends Controller{
 
 	public function actionStudentinfo(){
 		//获取自己指导学生的基本信息
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $username=$request->post('username');
         $query=(new Query())
               ->select('*')
@@ -39,6 +39,7 @@ class ResourceController extends Controller{
         	       ->from('arrange_info')
         	       ->andWhere(['job_num'=>$job_num])
         	       ->andWhere(['ischecked'=>1])
+                 ->andWhere(['type'=>1])
         	       ->andWhere(['status'=>1])
         	       ->all();
         	 $data=[];
@@ -63,6 +64,9 @@ class ResourceController extends Controller{
         	          ->all();
         	    $designnum=count($design);
         	    $review=1;//默认设置审阅状态
+              if($designnum==0){
+               $review=2;//表示学生还未提交
+               }
         	    for($j=0;$j<$designnum;$j++){
         	    	if($design[$j]['review']==null){
         	    		$review=0;
@@ -110,7 +114,7 @@ class ResourceController extends Controller{
 
 	public function actionInstructioninfo(){
 		//获取教学设计数据
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $username=$request->post('username');
         $query=(new Query())
               ->select('*')
@@ -144,7 +148,7 @@ class ResourceController extends Controller{
 
 	public function actionGeturl(){
 		//根据传过来的id查询文件的地址
-		$request = \Yii::$app->request;
+		    $request = \Yii::$app->request;
         $id=$request->post('uId');
         $url=(new Query())
             ->select('*')

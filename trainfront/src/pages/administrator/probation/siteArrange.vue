@@ -95,7 +95,6 @@
           <span style="cursor: pointer" @click="del(item.aId,item.tName)"> <el-button type="danger">删除</el-button></span>
             </td>
           </tr>
-
         </table>
       </div>
     </el-tab-pane>
@@ -156,7 +155,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
             },
             addOne(){
                 this.dialogFormVisible=true;
@@ -198,8 +196,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
-
             },
             submit(){
                 //保留见习分配修改信息
@@ -222,7 +218,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
             },
             resetarr(){
                 // this.$refs.arrForm.resetFields();
@@ -270,7 +265,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
             },
             importfxx(obj){
                 let _this = this
@@ -397,5 +391,4 @@
   .newbtn {
     padding-left: 50px;
   }
-
 </style>

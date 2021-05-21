@@ -89,5 +89,4 @@
     text-color:#fff;
     active-text-color:#ffd04b;
   }
-
 </style>

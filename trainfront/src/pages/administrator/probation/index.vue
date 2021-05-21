@@ -104,15 +104,6 @@
     text-color:#fff;
     active-text-color:#ffd04b;
   }
-  .copyright{
-    width:100%;
-    height:60px;
-    margin:0 auto;
-    color:white;
-    background-color: black;
-    /*border-top: 1px solid #afaeae;*/
-    position:relative;
-  }
   .copyright p{
     padding-top: 10px;
     margin:0px auto;
@@ -120,5 +111,4 @@
     color: #bcb9b9;
     text-align: center;
   }
-
 </style>

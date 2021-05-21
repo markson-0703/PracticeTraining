@@ -472,7 +472,6 @@
                         that.totalpage=res.data.data[1]
                         console.log(that.currentpage)
                     })
-
             },
             getStuData(){
                 //获取学生数据
@@ -642,8 +641,6 @@
                 let that = this
                 that.$http.post('/yii/probation/probation/altertea',{
                     username:that.teaForm.username,
-                    tname:that.teaForm.tName,
-                    jnum:that.teaForm.job_num,
                     phone:that.teaForm.contactPhone,
                     email:that.teaForm.email,
                     rank:that.teaForm.rank
@@ -683,7 +680,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
             },
             saveS(){
                 //保留学生修改信息
@@ -817,7 +813,6 @@
                 }).catch((err)=>{
                     console.log(err)
                 })
-
             },
             submitStu(){
                 //提交新增的学生信息
@@ -1151,7 +1146,6 @@
                 return pageArr
             }
         }
-
     }
 </script>
 

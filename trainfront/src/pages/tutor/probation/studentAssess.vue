@@ -69,7 +69,7 @@
            <el-button @click="dialogVisible1= false">取 消</el-button>
            <el-button type="primary" v-show="baseAssess.tutContent==''" @click="submitTutassess">提交</el-button>
            <el-button type="primary" v-show="baseAssess.tutContent!=''" @click="updateTutassess">更新</el-button>
-           </span>
+      </span>
     </el-dialog>
   </div>
 </template>

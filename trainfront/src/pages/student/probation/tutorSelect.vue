@@ -1,6 +1,6 @@
 <template>
   <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <marquee><h2>请从以上两种方式中任选一种进行导师选择！</h2></marquee>
+    <marquee><h2>请从以下两种方式中任选一种进行导师选择！</h2></marquee>
     <el-tab-pane label="按导师选择" name="first">
       <div class="display1">
         <div class="select-s">
@@ -251,7 +251,6 @@
                     console.log(res.data)
                     that.memberList=res.data.data
                 })
-
             },
             handleClick(tab, event) {
                 console.log(tab, event);
@@ -310,7 +309,7 @@
                 this.getTutorData1(site)
             },
             submit(){
-               //选择完实习点和导师后提交
+               //选择完见习点和导师后提交
                 let that = this
                 that.$http.post('/yii/probation/select/tutorarrange',{
                     username:that.username,
@@ -396,7 +395,6 @@
                     console.log(res.data)
                     that.tutorList=res.data.data
                 })
-
             },
             getTeaData(){
                 //获取教师数据

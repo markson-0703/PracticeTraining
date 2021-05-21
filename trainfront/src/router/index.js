@@ -9,8 +9,33 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Main from "../pages/home/main.vue";
 import ProbationIndex from "../pages/administrator/probation/index.vue";//管理员见习首页
-import PracticeIndex from "../pages/administrator/practice/index";
+import PracticeIndex from "../pages/administrator/practice/index";//管理员实习首页
+import UserInfo from "../pages/administrator/practice/user";//管理员用户管理
+import MemberManage from "../pages/administrator/practice/memberManage"
+import MyInformation2 from "../pages/administrator/practice/my";//管理员实习个人中心
 import ProbationIndex1 from "../pages/student/probation/index";//学生见习首页
+import PracticeIndex1 from "../pages/student/practice/index";//学生实习首页
+import ResearchReport from "../pages/student/practice/researchReport";
+import ParentMeeting from "../pages/student/practice/parentMeeting";
+import SpecialEvent from "../pages/student/practice/specialEvent";
+import InstructAssess from "../pages/student/practice/instructAssess";
+import ListenRecord from "../pages/student/practice/listenRecord";
+import ThemeRecord from "../pages/student/practice/themeRecord";
+import EventRecord from "../pages/student/practice/eventRecord";
+import PersonalInstruct from "../pages/student/practice/personalInstruct";
+import MyInformation from "../pages/student/practice/my";//学生实习个人中心
+import SomeTemplate from "../pages/student/practice/someTemplate";
+import WorkPlan from "../pages/student/practice/workPlan";
+import TeachDesign from "../pages/student/practice/teachDesign";
+import Diary from "../pages/student/practice/diary";
+import WorkDiary from "../pages/student/practice/workDiary";
+import TeacherSelect from "../pages/student/practice/teacherSelect";
+import PlaceArrange from "../pages/administrator/practice/placeArrange";
+import PracticeIndex2 from "../pages/teacher/practice/index";//校内教师实习首页
+import PracticePlan from "../pages/teacher/practice/practicePlan";
+import TeamManage from "../pages/teacher/practice/teamManage"
+import MyInformation1 from "../pages/teacher/practice/my";//校内教师实习个人中心
+import MyInformation3 from "../pages/tutor/practice/my";//校外教师实习个人中心
 import HomePage from "../pages/administrator/probation/homepage";
 import My from "../pages/administrator/probation/my";
 import My1 from "../pages/student/probation/my";
@@ -22,6 +47,9 @@ import SiteArrange from "../pages/administrator/probation/siteArrange";
 import TutorSelect from "../pages/student/probation/tutorSelect";
 import ProbationIndex2 from "../pages/teacher/probation/index";//校内教师见习首页
 import ProbationIndex3 from "../pages/tutor/probation/index";//校外教师见习首页
+import PracticeIndex3 from "../pages/tutor/practice/index";//校外教师实习首页
+import AllGuidance from "../pages/tutor/practice/Allguidance";
+import MemberData from "../pages/tutor/practice/memberData";
 import StudentData from "../pages/tutor/probation/studentData";
 import GuidanceRecord from "../pages/tutor/probation/guidanceRecord";
 import StudentAssess from "../pages/tutor/probation/studentAssess";
@@ -211,7 +239,29 @@ const  router = new Router({
       meta:{
         isLogin:true,
       },
-      component:PracticeIndex
+      component:PracticeIndex,
+      children:[
+        {
+          path: '/administrator/practice/my',
+          name: 'MyInformation2',
+          component: MyInformation2
+        },
+        {
+          path: '/administrator/practice/user',
+          name: 'UserInfo',
+          component: UserInfo
+        },
+        {
+          path: '/administrator/practice/memberManage',
+          name: 'MemberManage',
+          component: MemberManage
+        },
+        {
+          path: '/administrator/practice/placeArrange',
+          name: 'PlaceArrange',
+          component: PlaceArrange
+        }
+      ]
     },
     {
       //学生见习首页
@@ -393,6 +443,144 @@ const  router = new Router({
           path: '/tutor/probation/noticeDetail',
           name: 'NoticeDetail',
           component: NoticeDetail
+        }
+      ]
+    },
+    {
+      //学生实习首页
+      path:'/student/practice/index',
+      name:'PracticeIndex1',
+      meta:{
+        isLogin:true,
+      },
+      component:PracticeIndex1,
+      children:[
+        {
+          path: '/student/practice/my',
+          name: 'MyInformation',
+          component: MyInformation
+        },
+        {
+          path: '/student/practice/teacherSelect',
+          name: 'TeacherSelect',
+          component: TeacherSelect
+        },
+        {
+          path: '/student/practice/listenRecord',
+          name: 'ListenRecord',
+          component: ListenRecord
+        },
+        {
+          path: '/student/practice/diary',
+          name: 'Diary',
+          component: Diary
+        },
+        {
+          path: '/student/practice/teachDesign',
+          name: 'TeachDesign',
+          component: TeachDesign
+        },
+        {
+          path: '/student/practice/instructAssess',
+          name: 'InstructAssess',
+          component: InstructAssess
+        },
+        {
+          path: '/student/practice/someTemplate',
+          name: 'SomeTemplate',
+          component: SomeTemplate
+        },
+        {
+          path: '/student/practice/workPlan',
+          name: 'WorkPlan',
+          component: WorkPlan
+        },
+        {
+          path: '/student/practice/workDiary',
+          name: 'WorkDiary',
+          component: WorkDiary
+        },
+        {
+          path: '/student/practice/specialEvent',
+          name: 'SpecialEvent',
+          component: SpecialEvent
+        },
+        {
+          path: '/student/practice/themeRecord',
+          name: 'ThemeRecord',
+          component: ThemeRecord
+        },
+        {
+          path: '/student/practice/eventRecord',
+          name: 'EventRecord',
+          component: EventRecord
+        },
+        {
+          path: '/student/practice/personalInstruct',
+          name: 'PersonalInstruct',
+          component: PersonalInstruct
+        },
+        {
+          path: '/student/practice/parentMeeting',
+          name: 'ParentMeeting',
+          component: ParentMeeting
+        },
+        {
+          path: '/student/practice/researchReport',
+          name: 'ResearchReport',
+          component: ResearchReport
+        }
+      ]
+    },
+    {
+      //校内教师实习首页
+      path:'/teacher/practice/index',
+      name:'PracticeIndex2',
+      meta:{
+        isLogin:true,
+      },
+      component:PracticeIndex2,
+      children:[
+        {
+          path: '/teacher/practice/my',
+          name: 'MyInformation1',
+          component: MyInformation1
+        },
+        {
+          path: '/teacher/practice/teamManage',
+          name: 'TeamManage',
+          component: TeamManage
+        },
+        {
+          path: '/teacher/practice/practicePlan',
+          name: 'PracticePlan',
+          component: PracticePlan
+        }
+      ]
+    },
+    {
+      //校外教师实习首页
+      path:'/tutor/practice/index',
+      name:'PracticeIndex3',
+      meta:{
+        isLogin:true,
+      },
+      component:PracticeIndex3,
+      children:[
+        {
+          path: '/tutor/practice/my',
+          name: 'MyInformation3',
+          component: MyInformation3
+        },
+        {
+          path: '/tutor/practice/Allguidance',
+          name:'AllGuidance',
+          component: AllGuidance
+        },
+        {
+          path: '/tutor/practice/memberData',
+          name:'MemberData',
+          component: MemberData
         }
       ]
     }

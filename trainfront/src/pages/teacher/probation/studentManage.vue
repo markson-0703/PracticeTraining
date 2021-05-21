@@ -196,7 +196,6 @@
                         alert("设置组长失败！")
                     }
                 })
-
             },
             removeLeader(sno){
                 //移除组长
@@ -285,6 +284,7 @@
                 console.log(that.site)
                 that.$http.post('/yii/probation/infomation/getsitestu',{
                     site:that.site,
+                    username:that.username,
                     page: that.currentpage
                 }).then((res)=>{
                     console.log(res.data)
@@ -297,7 +297,7 @@
                     this.currentpage = page
                     console.log(this.currentpage)
                 }
-                this.getuserDate(this.currentpage)
+                this.getStudentInfo(this.currentpage)
             },
 
             prepage: function (page) { // 上一页
@@ -306,7 +306,7 @@
                     this.currentpage = page
                     console.log(this.currentpage)
                 }
-                this.getuserDate(this.currentpage)
+                this.getStudentInfo(this.currentpage)
             },
 
             nextpage: function (page) { // 下一页
@@ -315,7 +315,7 @@
                     this.currentpage = page
                     console.log(this.currentpage)
                 }
-                this.getuserDate(this.currentpage)
+                this.getStudentInfo(this.currentpage)
             }
         },
         created() {

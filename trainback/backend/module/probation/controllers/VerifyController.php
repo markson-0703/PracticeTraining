@@ -139,7 +139,6 @@ class VerifyController extends Controller{
       }else{
       	return false;
       }
- 
   }
 
 

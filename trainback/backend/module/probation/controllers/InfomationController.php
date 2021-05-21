@@ -32,6 +32,7 @@ class InfomationController extends Controller{
 		     ->select('*')
 		     ->from('student_info')
 		     ->andWhere(['username'=>$username])
+		     ->andWhere(['probation'=>1])
 		     ->andWhere(['status'=>1])
 		     ->one();
 		if($data){
@@ -87,7 +88,7 @@ class InfomationController extends Controller{
 		$query=(new Query())
 		      ->select('*')
 		      ->from('site_arrange')
-		      ->andWhere(['job_num'=>$result])
+		      ->andWhere(['job_num'=>$result['job_num']])
 		      ->andWhere(['typeId'=>1])//表明是见习的情况
 		      ->andWhere(['status'=>1])
 		      ->all();
@@ -104,10 +105,18 @@ class InfomationController extends Controller{
 		$currentpage=$request ->post('page');
 		$pageSize=8;
 		$site=$request ->post('site');//对应一个校内指导老师
+		$username=$request ->post('username');
+		$search=(new Query())
+		       ->select('*')
+		       ->from('teacher_info')
+		       ->andWhere(['username'=>$username])
+		       ->one();
+		$name=$search['tName'];
 		$query=(new Query())
 		      ->select('*')
 		      ->from('arrange_info')
 		      ->andWhere(['school_name'=>$site])
+		      ->andWhere(['tName'=>$name])
 		      ->andWhere(['type'=>1])
 		      ->andWhere(['status'=>1])
 		      ->all();
@@ -116,6 +125,7 @@ class InfomationController extends Controller{
 		      ->select('*')
 		      ->from('arrange_info')
 		      ->andWhere(['school_name'=>$site])
+		      ->andWhere(['tName'=>$name])
 		      ->andWhere(['type'=>1])
 		      ->andWhere(['status'=>1]);
 

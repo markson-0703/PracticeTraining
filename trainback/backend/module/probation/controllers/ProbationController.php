@@ -34,7 +34,7 @@ class ProbationController extends Controller{
     }
 
 	public function actionGetusers(){
-		//获取用户信息
+		//获取见习部分用户信息
 		 $request = \Yii::$app->request;
 		 $currentpage=$request ->post('page');
 		 $pageSize=8;
@@ -54,8 +54,8 @@ class ProbationController extends Controller{
 		 $querycount=clone $query1;
 		 $totalCount=$querycount->count();
 		 $data=$query1->offset($pageSize*($currentpage-1))->limit($pageSize)->all();
-         $pageNum = ceil($totalCount/8);
-         return array("data"=>[$data,$pageNum],"msg"=>"success");
+     $pageNum = ceil($totalCount/8);
+     return array("data"=>[$data,$pageNum],"msg"=>"success");
 	}
 
 	public function actionQueryuser(){
@@ -93,13 +93,14 @@ class ProbationController extends Controller{
 		if($role==2){
 			$deleteU = \Yii::$app->db->createCommand()->update('users',
         [
-        'probation'=>0
+        'probation'=>0,
+        'status'=>0
         ],'username=:username',[':username'=>$uname])->execute();
             // $result1 = \Yii::$app->db->createCommand()
             //      ->delete('teacher_info','username=:uname',
             //      	[':uname'=>$username])->execute(); 
 
-            if($deleteU){
+      if($deleteU){
          	return array("data"=>[],"msg"=>"success");
 	     }
 	     else{
@@ -442,16 +443,12 @@ class ProbationController extends Controller{
    	//更新修改的教师信息
    	$request = \Yii::$app->request;
    	$username= $request->post('username');
-   	$name= $request->post('tname');
-   	$job_num= $request->post('jnum');
    	$phone= $request->post('phone');
    	$email= $request->post('email');
    	$rank= $request->post('rank');
    	//更新数据
    	$updateT=\Yii::$app->db->createCommand()->update('teacher_info',
    		[
-			'tName'=>$name,
-			'job_num'=>$job_num,
 			'contactPhone'=>$phone,
 			'email'=>$email,
 			'rank'=>$rank
@@ -763,16 +760,17 @@ class ProbationController extends Controller{
    public function actionDeletetea(){
    	//删除教师用户
    	$request = \Yii::$app->request;
-   	$username = $request->post('username');
+   	$uname = $request->post('username');
    	$del1= \Yii::$app->db->createCommand()->update('users',
         [
         'probation'=>0
         ],'username=:username',[':username'=>$uname])->execute();
-   	// $del2= \Yii::$app->db->createCommand()
-   	//      ->delete('users','username=:username',
-   	//      	[':username'=>$username])->execute();
+    $del2= \Yii::$app->db->createCommand()->update('teacher_info',
+        [
+        'status'=>0
+        ],'username=:username',[':username'=>$uname])->execute();
 
-   	if($del1){
+   	if($del1&$del2){
    		return array("data"=>[],"msg"=>"success");
    	}else{
    		return array("data"=>[],"msg"=>"failure");
@@ -783,7 +781,7 @@ class ProbationController extends Controller{
    public function actionDeletetut(){
    	//删除教师用户
    	$request = \Yii::$app->request;
-   	$username = $request->post('username');
+   	$uname = $request->post('username');
    	$del1= \Yii::$app->db->createCommand()->update('tutor_info',
         [
         'probation'=>0
@@ -803,7 +801,7 @@ class ProbationController extends Controller{
    public function actionDeletestu(){
    	//删除学生用户
    	$request = \Yii::$app->request;
-   	$username = $request->post('username');
+   	$uname = $request->post('username');
    	$del1= \Yii::$app->db->createCommand()->update('student_info',
         [
         'probation'=>0
@@ -818,7 +816,6 @@ class ProbationController extends Controller{
    	}else{
    		return array("data"=>[],"msg"=>"failure");
    	}
-   	
    }
 
    public function actionImportexcel(){
@@ -961,7 +958,6 @@ class ProbationController extends Controller{
    			return array("data"=>[],"msg"=>"已存在");
    		}
    	}
-
    }
 
       public function actionImportexcel2(){

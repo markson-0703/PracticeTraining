@@ -1,6 +1,6 @@
 <template>
     <div class="personal">
-      <!--      该页面属于教师的个人中心-->
+      <!--      该页面属于教师见习的个人中心-->
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="个人信息" name="first">
           <h1 style="font-weight:bold;font-color:black">{{this.content}}</h1>
@@ -195,7 +195,7 @@
   }
   #demo {
     background-color: #fff;
-    width: 80%;
+    width: 90%;
     /* height: 400px; */
     padding: 60px 0px 60px 400px;
     box-sizing: border-box;

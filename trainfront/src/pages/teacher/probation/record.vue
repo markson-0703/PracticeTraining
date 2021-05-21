@@ -19,12 +19,13 @@
           </td>
           <td>
             {{item.design}}条数据
-            <span><el-button size="small" type="primary" plain @click="designDetail(item.username)">详情</el-button></span>
+            <span><el-button size="small" type="primary" plain @click="designDetail(item.username)" v-show="item.status!=2">详情</el-button></span>
           </td>
           <td>
           <span>
-            <el-tag type="success" v-show="item.status">已审阅</el-tag>
-            <el-tag type="info" v-show="item.status!=1">待审阅</el-tag>
+            <el-tag type="success" v-show="item.status==1">已审阅</el-tag>
+            <el-tag type="info" v-show="item.status==0">待审阅</el-tag>
+            <el-tag type="warning" v-show="item.status==2">暂未有提交</el-tag>
           </span>
           </td>
         </tr>

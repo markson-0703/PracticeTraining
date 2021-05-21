@@ -47,6 +47,7 @@ class SelectController extends Controller{
 	          ->select('*')
 	          ->from('tutor_info')
 	          ->andWhere(['school_name'=>$site])
+	          ->andWhere(['probation'=>1])
 	          ->andWhere(['status'=>1])
 	          ->all();
 	    return array("data"=>$query,"msg"=>"success");
@@ -168,6 +169,7 @@ class SelectController extends Controller{
 		      ->select('*')
 		      ->from('arrange_info')
 		      ->andWhere(['username'=>$username])
+		      ->andWhere(['type'=>1])
 		      ->one();
 		if($query)
 		{
@@ -177,6 +179,7 @@ class SelectController extends Controller{
 			       ->from('arrange_info')
 			       ->andWhere(['school_name'=>$site])
 			       ->andWhere(['ischecked'=>1])
+			       ->andWhere(['type'=>1])
 			       ->andWhere(['status'=>1])
 			       ->all();
 			if($query1){

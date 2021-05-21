@@ -9,7 +9,7 @@
       <div class="btnGroup">
         <div class="groupup">
       <div class="type1"><a class="jianxi" @click="goProbation">师范生见习</a></div>
-      <div class="type2"><a class="shixi">师范生实习与研习</a></div>
+      <div class="type2"><a class="shixi" @click="goPractice">师范生实习与研习</a></div>
         </div>
         <div class="groupdown">
       <div class="type3"><a class="weige">微格教学技能训练</a></div>
@@ -85,6 +85,34 @@
                     this.$router.push({
                         path: '/tutor/probation/index',
                         name: 'ProbationIndex3',
+                        params: {username: this.name, password: this.pwd}
+                    })
+                }
+            },
+            goPractice(){
+                if(this.role==1) {
+                    this.$router.push({
+                        path: '/administrator/practice/index',
+                        name: 'PracticeIndex',
+                        params: {username: this.name, password: this.pwd}
+                    })
+                }else if(this.role==2){
+                    this.$router.push({
+                        path: '/teacher/practice/index',
+                        name: 'PracticeIndex2',
+                        params: {username: this.name, password: this.pwd}
+                    })
+
+                }else if(this.role==3){
+                    this.$router.push({
+                        path: '/student/practice/index',
+                        name: 'PracticeIndex1',
+                        params: {username: this.name, password: this.pwd}
+                    })
+                }else if(this.role==4){
+                    this.$router.push({
+                        path: '/tutor/practice/index',
+                        name: 'PracticeIndex3',
                         params: {username: this.name, password: this.pwd}
                     })
                 }

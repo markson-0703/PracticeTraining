@@ -1,6 +1,6 @@
 <template>
     <div class="personal">
-<!--      该页面属于管理员的个人中心-->
+<!--      该页面属于管理员见习部分的个人中心-->
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="个人信息" name="first">
           <h1 style="font-weight:bold;font-color:black">{{this.content}}</h1>
@@ -490,7 +490,7 @@
                         if(res.data.message=="success"){
                             that.getTemplate()
                             that.getteacherTem()
-                            that.getteacherTem()
+                            that.gettutorTem()
                             alert('删除成功!')
                         }else{
                             alert('操作失败!')
